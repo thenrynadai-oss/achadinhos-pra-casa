@@ -39,21 +39,52 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
 3. [ ] **Página no Facebook** "Achadinhos pra Casa" e um **app de desenvolvedor da Meta**
    (modo desenvolvimento, permissões `pages_manage_posts`, `pages_read_engagement`,
    `pages_show_list`). Guia passo a passo quando chegar a hora.
-4. [ ] **Bot do Telegram** pelo @BotFather, mais um **canal** com o bot como administrador.
-5. [ ] Colar as chaves no `.env` local, que o `.gitignore` já exclui. Nas Actions, elas
-   entram como segredos do repositório.
+4. [ ] **Telegram:**
+   - no Telegram, fale com o @BotFather, mande `/newbot` e crie o bot "Achadinhos pra Casa";
+     ele devolve um **token**;
+   - crie um **canal público** (o endereço, por exemplo `@achadinhospracasa`, é você quem
+     escolhe se estiver livre);
+   - adicione o bot como **administrador** do canal, com permissão de publicar;
+   - no PowerShell, rode os dois comandos abaixo. O primeiro pede o token e você cola; eu
+     nunca digito chave:
+     ```
+     gh secret set TELEGRAM_TOKEN -R thenrynadai-oss/achadinhos-pra-casa
+     gh secret set TELEGRAM_CANAL -R thenrynadai-oss/achadinhos-pra-casa --body "@nome-do-canal"
+     ```
+5. [ ] Chaves do Facebook, quando chegar a hora: segredos do repositório, do mesmo jeito.
+
+## Operação
+
+- **Fila:** `conteudo/fila/AAAA-MM-DD.json`, um lote por semana (o formato está em
+  `ferramentas/fila.py`). O lote nasce com `aprovado_em: null`. Só depois do "aprovado" no
+  chat eu preencho a data, e só aí ele pode ser publicado.
+- **Pinterest:** `python ferramentas/pinterest_csv.py` gera `saida/pinterest-<data>.csv`.
+  Ele é enviado pelo menu "Criar Pins em massa" do Pinterest Business: um upload por
+  semana. A data vai em UTC, e a conversão já está feita e testada.
+- **Telegram:** o workflow `telegram.yml` roda a cada 15 minutos no GitHub. Ele publica o
+  que venceu e registra em `conteudo/publicados/telegram.json` com um commit do robô, para
+  nunca repetir post. Post atrasado mais de 3 horas não sai: fica marcado como perdido.
+- **Antes de qualquer push meu:** `git fetch` e `git pull --rebase`, porque o robô também
+  faz commit na `main`. Nunca `--force`.
+- **Atenção:** o GitHub desliga agendamento de repositório público depois de 60 dias sem
+  atividade. Os commits do robô contam como atividade.
+- **Testes:** `python ferramentas/testes.py` roda 13 testes: fuso (inclusive horário de
+  verão e virada de dia em UTC), fila, CSV e robô. Um deles falha se aparecer fuso fixo ou
+  soma de 24h em qualquer ferramenta. O workflow `testes.yml` roda tudo a cada push.
 
 ## Estado
 
-- 2026-09-25: repositório criado (vazio). Autor dos commits configurado só neste repo
-  como `thenrynadai-oss`. Gerador de Pins pronto, com os 3 primeiros Pins de aquecimento em
-  `site/img/pins/`. Nada publicado ainda.
+- 2026-09-25: site no ar em https://thenrynadai-oss.github.io/achadinhos-pra-casa/ (commit
+  `22c71b1`). Pins em JPG (113 a 213 KB). Gerador do CSV do Pinterest e robô do Telegram
+  prontos e testados em ensaio. Nada publicado em rede social ainda, e nenhuma conta criada.
 
 ## Estrutura
 
 ```
-conteudo/          fila de conteúdo (JSON): o que vai ao ar e quando
+conteudo/          dicas, produtos, pins, fila (JSON): a fonte de tudo
+conteudo/fila/     lotes semanais do que vai ao ar e quando
 pins/modelos/      modelos HTML dos Pins (1000 x 1500)
-ferramentas/       geradores e publicadores
+web/               modelo base, CSS e favicon do site
+ferramentas/       geradores, publicadores, testes
 site/              vitrine pública (GitHub Pages) e imagens
 ```

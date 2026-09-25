@@ -7,3 +7,6 @@ pins/_build/
 pins/_rascunho/
 _upload-portfolio/
 __pycache__/
+
+# arquivos gerados para upload manual (CSV do Pinterest)
+saida/

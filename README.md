@@ -6,10 +6,15 @@ Dicas de organização e achadinhos baratos para casa e cozinha. Este repositór
 ## Como gerar
 
 ```bash
-python ferramentas/gerar_pins.py conteudo/pins-aquecimento.json   # imagens dos Pins -> site/img/pins/
-python ferramentas/gerar_site.py                                  # páginas -> site/
-python ferramentas/verificar_site.py                              # confere links e imagens
+python ferramentas/gerar_pins.py             # imagens dos Pins (JPG) -> site/img/pins/
+python ferramentas/gerar_site.py             # páginas -> site/
+python ferramentas/verificar_site.py         # confere links e imagens
+python ferramentas/testes.py                 # fuso, fila, CSV e robô
+python ferramentas/pinterest_csv.py          # CSV de "Criar Pins em massa" -> saida/
+python ferramentas/telegram_publicar.py --ensaio   # mostra o que o robô publicaria agora
 ```
+
+Todo horário da fila é de Brasília, e só `ferramentas/tempo.py` converte fuso.
 
 As imagens dos Pins são fotografadas pelo Edge em modo headless, por isso rodam no
 Windows. O site e a verificação rodam em qualquer lugar.

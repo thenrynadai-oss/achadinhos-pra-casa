@@ -1,12 +1,13 @@
 """Gera as imagens dos Pins (1000 x 1500) a partir de um arquivo de conteúdo.
 
 Uso:
-    python ferramentas/gerar_pins.py conteudo/pins-aquecimento.json
-    python ferramentas/gerar_pins.py conteudo/pins-aquecimento.json despensa-5-passos   (só um)
+    python ferramentas/gerar_pins.py                      (todos os Pins de conteudo/pins.json)
+    python ferramentas/gerar_pins.py despensa-5-passos    (só os ids indicados)
 
 Cada Pin é um modelo HTML de pins/modelos/ preenchido com os dados do JSON e
-fotografado pelo Edge em modo headless. As imagens saem em site/img/pins/, que é de
-onde o CSV do Pinterest e a API do Facebook vão buscá-las depois de publicadas.
+fotografado pelo Edge em modo headless. O resultado sai em JPG em site/img/pins/, que é
+de onde o CSV do Pinterest e a API do Facebook vão buscá-lo depois de publicado. JPG e não
+PNG: o PNG de um Pin com foto passa de 900 KB, e a home carrega vários.
 """
 import html
 import json
@@ -75,10 +76,8 @@ def fotografar(pagina: pathlib.Path, destino: pathlib.Path) -> None:
 
 
 def main() -> None:
-    if len(sys.argv) < 2:
-        sys.exit(__doc__)
-    pins = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8"))
-    so_estes = set(sys.argv[2:])
+    pins = json.loads((RAIZ / "conteudo" / "pins.json").read_text(encoding="utf-8"))
+    so_estes = set(sys.argv[1:])
     BUILD.mkdir(parents=True, exist_ok=True)
     SAIDA.mkdir(parents=True, exist_ok=True)
 
@@ -87,13 +86,15 @@ def main() -> None:
             continue
         pagina = BUILD / f"{pin['id']}.html"
         pagina.write_text(preencher(pin), encoding="utf-8")
-        destino = SAIDA / f"{pin['id']}.png"
-        fotografar(pagina, destino)
-        with Image.open(destino) as im:
-            ok = im.size == (LARGURA, ALTURA)
-            print(f"{'ok ' if ok else 'ERRO'} {destino.relative_to(RAIZ)}  {im.size[0]}x{im.size[1]}")
-            if not ok:
-                sys.exit("O Pin saiu com tamanho errado.")
+        bruto = BUILD / f"{pin['id']}.png"
+        fotografar(pagina, bruto)
+        destino = SAIDA / f"{pin['id']}.jpg"
+        with Image.open(bruto) as im:
+            if im.size != (LARGURA, ALTURA):
+                sys.exit(f"{pin['id']}: o Pin saiu com {im.size[0]}x{im.size[1]}, e não {LARGURA}x{ALTURA}.")
+            im.convert("RGB").save(destino, "JPEG", quality=86, optimize=True, progressive=True)
+        (SAIDA / f"{pin['id']}.png").unlink(missing_ok=True)
+        print(f"ok  {destino.relative_to(RAIZ)}  {LARGURA}x{ALTURA}  {destino.stat().st_size // 1024} KB")
 
 
 if __name__ == "__main__":

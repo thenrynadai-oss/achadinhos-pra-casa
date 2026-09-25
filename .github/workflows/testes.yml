@@ -1,0 +1,18 @@
+name: Testes
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ferramentas (fuso, fila, CSV do Pinterest, robô do Telegram)
+        run: python3 ferramentas/testes.py
+      - name: Links e imagens do site
+        run: python3 ferramentas/verificar_site.py
