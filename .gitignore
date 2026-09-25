@@ -1,0 +1,9 @@
+# chaves de acesso nunca entram no repositório
+.env
+*.env
+
+# rascunhos e arquivos intermediários
+pins/_build/
+pins/_rascunho/
+_upload-portfolio/
+__pycache__/

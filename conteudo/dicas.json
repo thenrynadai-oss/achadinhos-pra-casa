@@ -1,0 +1,49 @@
+[
+  {
+    "slug": "cozinha-pequena-7-truques",
+    "titulo": "7 truques pra organizar a cozinha pequena",
+    "resumo": "Mais espaço sem reforma e sem gastar muito.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/cozinha-pequena-7-truques.png",
+    "itens": [
+      ["Use a parede", "Uma barra com ganchos tira os utensílios da gaveta e deixa tudo à mão."],
+      ["Prateleiras suspensas acima da bancada", "Elas liberam a bancada para o que você usa todo dia."],
+      ["Organizadores de dois andares", "Dentro dos armários, eles dobram o espaço para pratos e potes."],
+      ["Potes quadrados e empilháveis", "Aproveitam melhor o espaço do que os redondos."],
+      ["A porta do armário também é espaço", "Ganchos adesivos seguram tampas e panos de prato."],
+      ["Um carrinho estreito", "Entre a geladeira e a parede costuma caber um carrinho de apoio com rodinhas."],
+      ["Bancada só com o essencial", "Deixe à vista só o que você usa todo dia. O resto vai para os armários."]
+    ]
+  },
+  {
+    "slug": "despensa-5-passos",
+    "titulo": "Despensa organizada em 5 passos",
+    "resumo": "Do caos a prateleiras que dá gosto de abrir.",
+    "categoria": "Despensa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/despensa-5-passos.png",
+    "itens": [
+      ["Tire tudo e descarte o que venceu", "Aproveite a prateleira vazia para limpar."],
+      ["Agrupe por categoria", "Café da manhã, massas, enlatados, lanches: cada grupo no seu lugar."],
+      ["Potes transparentes para grãos e farinhas", "Você vê na hora o que está acabando."],
+      ["Etiquete potes e cestos", "Assim todo mundo da casa sabe onde guardar."],
+      ["O que vence primeiro vai na frente", "Nada fica esquecido no fundo da prateleira."]
+    ]
+  },
+  {
+    "slug": "geladeira-cada-prateleira",
+    "titulo": "Geladeira organizada: o que vai em cada prateleira",
+    "resumo": "Um lugar certo para cada alimento conserva melhor e evita desperdício.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/geladeira-cada-prateleira.png",
+    "itens": [
+      ["Porta: molhos, condimentos e bebidas", "É a parte menos fria da geladeira, porque abre e fecha o tempo todo."],
+      ["Prateleira de cima: sobras e prontos para comer", "O que precisa ser consumido primeiro fica à vista."],
+      ["Meio: laticínios e ovos", "Os ovos ficam melhor na própria embalagem, fora da porta."],
+      ["Prateleira de baixo: carnes cruas", "Sempre em recipiente fechado. É a parte mais fria, e nada pinga nos outros alimentos."],
+      ["Gavetas: frutas e verduras", "Cada uma na sua gaveta."]
+    ]
+  }
+]

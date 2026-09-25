@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${titulo_pagina}</title>
+<meta name="description" content="${descricao}">
+<link rel="canonical" href="${url}">
+<meta property="og:site_name" content="${nome_site}">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="${og_tipo}">
+<meta property="og:title" content="${titulo}">
+<meta property="og:description" content="${descricao}">
+<meta property="og:url" content="${url}">
+${meta_extra}
+<meta name="theme-color" content="#c8553d">
+<link rel="icon" href="${raiz}favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,700..900,0..100&family=Nunito+Sans:opsz,wght@6..12,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="${raiz}estilo.css">
+</head>
+<body>
+<header class="topo">
+  <div class="largura topo-linha">
+    <a class="marca" href="${raiz}">
+      <svg width="34" height="34" viewBox="0 0 44 44" aria-hidden="true"><path d="M6 20 L22 7 L38 20 V37 a3 3 0 0 1 -3 3 H9 a3 3 0 0 1 -3 -3 Z" fill="#c8553d"/><path d="M22 33 c-5 -3.6 -8 -6.2 -8 -9.4 a4 4 0 0 1 8 -1.4 a4 4 0 0 1 8 1.4 c0 3.2 -3 5.8 -8 9.4 Z" fill="#fff6ea"/></svg>
+      <span>Achadinhos pra Casa</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="${raiz}#dicas">Dicas</a>
+      ${menu_achadinhos}
+      <a href="${raiz}sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
+<main id="conteudo">
+${conteudo}
+</main>
+<footer class="rodape">
+  <div class="largura">
+    <p class="aviso-afiliado">Alguns links deste site são de afiliado: se você comprar por eles, a gente recebe uma pequena comissão da loja. O preço para você não muda.</p>
+    <p class="rodape-links"><a href="${raiz}sobre/">Sobre</a> · <a href="${raiz}privacidade/">Privacidade</a> · © ${ano} ${nome_site}</p>
+  </div>
+</footer>
+</body>
+</html>

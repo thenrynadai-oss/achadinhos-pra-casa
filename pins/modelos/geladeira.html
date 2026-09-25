@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,700..900,0..100;1,9..144,600,0..100&family=Nunito+Sans:opsz,wght@6..12,600..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinta: #2b2521;
+    --creme: #fff6ea;
+    --areia: #f3e1cf;
+    --terracota: #c8553d;
+    --salvia: #6f9476;
+    --suave: #7a6a5f;
+    --inox: #e9e4dc;
+    --borda: #cfc4b6;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1000px; height: 1500px; overflow: hidden; background: var(--creme); }
+  body { position: relative; font-family: 'Nunito Sans', sans-serif; color: var(--tinta); padding: 70px 70px 0; }
+
+  .chip {
+    display: inline-block; padding: 11px 24px; border-radius: 999px;
+    background: var(--areia); color: var(--terracota);
+    font-weight: 900; font-size: 26px; letter-spacing: .16em; text-transform: uppercase;
+  }
+  h1 {
+    margin-top: 24px;
+    font-family: 'Fraunces', serif; font-weight: 800; font-size: 100px; line-height: 1;
+    letter-spacing: -.015em; font-variation-settings: 'SOFT' 100;
+  }
+  .sub {
+    margin-top: 10px;
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 600; font-size: 50px;
+    color: var(--terracota);
+  }
+
+  /* a geladeira */
+  .geladeira {
+    position: absolute; left: 70px; right: 70px; top: 470px; height: 890px;
+    display: grid; grid-template-columns: 1fr 230px; gap: 14px;
+  }
+  .corpo, .porta {
+    background: #fffdfa;
+    border: 5px solid var(--borda);
+    border-radius: 34px;
+    padding: 18px;
+    display: grid; gap: 14px;
+  }
+  .corpo { grid-template-rows: repeat(3, minmax(0, 1fr)) minmax(0, .9fr); }
+  .porta { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+
+  .zona {
+    border-radius: 20px;
+    padding: 16px 24px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .zona b { font-size: 34px; line-height: 1.1; font-weight: 900; }
+  .zona span { margin-top: 6px; font-size: 24px; line-height: 1.25; font-weight: 600; color: var(--suave); }
+  .zona .tag {
+    display: block; margin-bottom: 8px;
+    font-size: 20px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--tinta); opacity: .45;
+  }
+  .z1 { background: #f6eee2; }
+  .z2 { background: #efe6d6; }
+  .z3 { background: #f7dcd3; }
+  .z3 b { color: #9b3a26; }
+  .gavetas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .gavetas .zona { background: #dde9dc; text-align: center; align-items: center; }
+  .gavetas .zona b { color: #3f6647; }
+
+  .porta .zona { background: #f1ece5; padding: 18px; text-align: center; align-items: center; }
+  .porta .zona b { font-size: 30px; }
+  .porta .zona span { font-size: 22px; }
+  .puxador { position: absolute; left: -12px; top: 60px; width: 10px; height: 120px; border-radius: 6px; background: var(--borda); }
+
+  .marca {
+    position: absolute; left: 70px; right: 70px; bottom: 58px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-weight: 800; font-size: 28px;
+  }
+  .marca .nome { display: flex; align-items: center; gap: 14px; }
+  .marca .salve { color: var(--suave); font-weight: 700; font-size: 26px; }
+</style>
+</head>
+<body>
+  <span class="chip">${categoria}</span>
+  <h1>${titulo}</h1>
+  <p class="sub">${subtitulo}</p>
+
+  <div class="geladeira">
+    <div class="corpo">
+      <div class="zona z1"><span class="tag">em cima</span><b>Sobras e prontos pra comer</b><span>o que vai ser consumido primeiro, à vista</span></div>
+      <div class="zona z2"><span class="tag">meio</span><b>Laticínios e ovos</b><span>ovos na embalagem, longe da porta</span></div>
+      <div class="zona z3"><span class="tag">embaixo</span><b>Carnes cruas, em pote fechado</b><span>a parte mais fria, e nada pinga no resto</span></div>
+      <div class="gavetas">
+        <div class="zona"><b>Frutas</b><span>numa gaveta</span></div>
+        <div class="zona"><b>Verduras</b><span>na outra</span></div>
+      </div>
+    </div>
+    <div class="porta">
+      <div class="zona"><div class="puxador"></div><b>Molhos</b><span>e temperos</span></div>
+      <div class="zona"><b>Condi&shy;mentos</b><span>geleias, manteiga</span></div>
+      <div class="zona"><b>Bebidas</b><span>a porta é a parte menos fria</span></div>
+    </div>
+  </div>
+
+  <div class="marca">
+    <span class="nome">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M6 20 L22 7 L38 20 V37 a3 3 0 0 1 -3 3 H9 a3 3 0 0 1 -3 -3 Z" fill="#c8553d"/>
+        <path d="M22 33 c-5 -3.6 -8 -6.2 -8 -9.4 a4 4 0 0 1 8 -1.4 a4 4 0 0 1 8 1.4 c0 3.2 -3 5.8 -8 9.4 Z" fill="#fff6ea"/>
+      </svg>
+      Achadinhos pra Casa
+    </span>
+    <span class="salve">salve pra depois</span>
+  </div>
+</body>
+</html>
