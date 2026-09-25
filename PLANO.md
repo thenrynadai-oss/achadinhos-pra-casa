@@ -60,7 +60,9 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   chat eu preencho a data, e só aí ele pode ser publicado.
 - **Pinterest:** `python ferramentas/pinterest_csv.py` gera `saida/pinterest-<data>.csv`.
   Ele é enviado pelo menu "Criar Pins em massa" do Pinterest Business: um upload por
-  semana. A data vai em UTC, e a conversão já está feita e testada.
+  semana. A data vai em UTC, e a conversão já está feita e testada. Pin marcado para menos
+  de 3 horas depois da geração fica de fora do CSV (aparece como FORA), porque o Pinterest
+  leva cerca de 2 horas para criar os Pins depois do upload.
 - **Telegram:** o workflow `telegram.yml` roda a cada 15 minutos no GitHub. Ele publica o
   que venceu e registra em `conteudo/publicados/telegram.json` com um commit do robô, para
   nunca repetir post. Post atrasado mais de 3 horas não sai: fica marcado como perdido.
@@ -68,8 +70,9 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   faz commit na `main`. Nunca `--force`.
 - **Atenção:** o GitHub desliga agendamento de repositório público depois de 60 dias sem
   atividade. Os commits do robô contam como atividade.
-- **Testes:** `python ferramentas/testes.py` roda 13 testes: fuso (inclusive horário de
-  verão e virada de dia em UTC), fila, CSV e robô. Um deles falha se aparecer fuso fixo ou
+- **Testes:** `python ferramentas/testes.py` roda 15 testes: fuso (inclusive horário de
+  verão, virada de dia em UTC e diferença entre instantes), fila, CSV e robô. Diferença de
+  horário só por `tempo.diferenca`, que conta em UTC. Um deles falha se aparecer fuso fixo ou
   soma de 24h em qualquer ferramenta. O workflow `testes.yml` roda tudo a cada push.
 
 ## Estado

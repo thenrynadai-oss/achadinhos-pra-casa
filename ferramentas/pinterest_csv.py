@@ -17,6 +17,7 @@ import csv
 import json
 import pathlib
 import sys
+from datetime import timedelta  # só para a MARGEM; tempo de verdade vem de tempo.py
 
 import fila
 import tempo
@@ -24,6 +25,9 @@ import tempo
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 COLUNAS = ["Title", "Media URL", "Pinterest board", "Thumbnail", "Description", "Link", "Publish date", "Keywords"]
 LIMITE_LINHAS = 200
+# O Pinterest leva "cerca de duas horas" para criar os Pins depois do upload (mensagem da
+# própria tela, 25/09/2026). Pin marcado para antes disso pode não ficar pronto a tempo.
+MARGEM = timedelta(hours=3)
 
 
 def url_publica(base: str, caminho: str) -> str:
@@ -52,7 +56,11 @@ def gerar(ensaio: bool = False, pasta: pathlib.Path = fila.PASTA_FILA) -> pathli
     base = json.loads((RAIZ / "conteudo" / "site.json").read_text(encoding="utf-8"))["base_url"]
     pins = fila.pins_por_id()
     agora = tempo.agora()
-    escolhidos = [p for p in fila.carregar(pasta) if p.canal == "pinterest" and (p.aprovado or ensaio) and p.momento > agora]
+    candidatos = [p for p in fila.carregar(pasta) if p.canal == "pinterest" and (p.aprovado or ensaio) and p.momento > agora]
+    escolhidos = [p for p in candidatos if tempo.diferenca(p.momento, agora) >= MARGEM]
+    for p in candidatos:
+        if p not in escolhidos:
+            print(f"  FORA: {p.id} é para {tempo.texto_local(p.momento)}, a menos de {MARGEM} do upload; o Pinterest pode não criar a tempo")
     if not escolhidos:
         print("Nenhum Pin aprovado e no futuro. Nada a gerar.")
         return None

@@ -50,6 +50,22 @@ def o_dia_anda_no_calendario_e_nao_somando_24_horas():
 
 
 @teste
+def diferenca_entre_instantes_respeita_o_horario_de_verao():
+    from datetime import timedelta
+    # das 9h de 03/11/2018 às 9h de 04/11/2018 passaram 23 horas reais (começou o horário de verão)
+    assert tempo.diferenca(tempo.instante("2018-11-04", "09:00"), tempo.instante("2018-11-03", "09:00")) == timedelta(hours=23)
+    assert tempo.diferenca(tempo.instante("2026-09-29", "22:30"), tempo.instante("2026-09-29", "19:30")) == timedelta(hours=3)
+
+
+@teste
+def csv_deixa_de_fora_pin_em_cima_da_hora():
+    from datetime import timedelta
+    agora = tempo.agora()
+    assert pinterest_csv.MARGEM >= timedelta(hours=2)  # o Pinterest leva ~2h para criar os Pins
+    assert tempo.diferenca(agora + timedelta(minutes=30), agora) < pinterest_csv.MARGEM
+
+
+@teste
 def dias_seguidos_viram_mes_e_ano():
     assert tempo.dias_seguidos("2026-12-30", 3) == ["2026-12-30", "2026-12-31", "2027-01-01"]
 

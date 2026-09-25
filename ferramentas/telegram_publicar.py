@@ -48,7 +48,7 @@ def escolher(posts: list, publicados: dict, agora: datetime, janela: timedelta =
             continue
         if p.momento > agora:
             continue
-        (perdidos if agora - p.momento > janela else publicar).append(p)
+        (perdidos if tempo.diferenca(agora, p.momento) > janela else publicar).append(p)
     return publicar, perdidos
 
 

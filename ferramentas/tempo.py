@@ -37,6 +37,12 @@ def para_utc_pinterest(momento: datetime) -> str:
     return em_brasilia(momento).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
 
 
+def diferenca(depois: datetime, antes: datetime) -> timedelta:
+    """Tempo real entre dois instantes. Em Python, subtrair dois horários do MESMO fuso compara
+    o relógio de parede e ignora o horário de verão; em UTC a conta é a verdadeira."""
+    return em_brasilia(depois).astimezone(timezone.utc) - em_brasilia(antes).astimezone(timezone.utc)
+
+
 def utc_iso(momento: datetime) -> str:
     """Carimbo para registro: '2026-09-29T22:30:00Z'."""
     return para_utc_pinterest(momento) + "Z"
