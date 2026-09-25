@@ -95,6 +95,9 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   Pins de dica com temas novos, de 03/10 a 09/10, às 12h15 e 20h30, e 7 posts no Telegram
   às 19h30. Continua só com dicas porque a Shopee ainda analisa a inscrição; o lote 3 entra
   com produto se ela aprovar. O site vai a 28 dicas.
+- 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
+  primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
+  pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.
 - 2026-09-25: **Telegram pronto.** Canal `@achadinhospracasa_oficial` e bot
   `@Achadinhospracasa_oficial_bot`, este só com permissão de publicar. A verificação no
   GitHub passou. O workflow roda a cada 15 minutos e publica os lotes aprovados. (Chegou a
