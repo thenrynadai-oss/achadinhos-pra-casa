@@ -44,12 +44,19 @@ clicar em "autorizar acesso". Por isso esses passos estão todos aqui, juntos, n
     autônomo. Se for o seu caso, é o item mais trabalhoso da lista.
   - Validação: até 7 dias úteis. A comissão é paga no dia 10 de cada mês, na Maree.
 
-### 3. Telegram — PAUSADO em 2026-09-25
+### 3. Telegram — PRONTO em 2026-09-25
 
-O Henrique não vai usar a conta pessoal do Telegram, que é a do trabalho, para isso. O
-workflow `telegram.yml` foi desligado no GitHub (`gh workflow enable telegram.yml -R
-thenrynadai-oss/achadinhos-pra-casa` religa). Os passos abaixo só valem se um dia houver
-uma conta separada.
+- Bot **@Achadinhospracasa_oficial_bot**, criado pelo Henrique no @BotFather. Token no segredo
+  `TELEGRAM_TOKEN`. O primeiro token passou pelo chat e foi revogado.
+- Canal público **Achadinhos pra Casa**, `@achadinhospracasa_oficial` (segredo
+  `TELEGRAM_CANAL`). "Assinar mensagens" desligado, então os posts não mostram o nome do
+  Henrique.
+- O bot é administrador **só com "Publicar mensagens"**. Todas as outras permissões estão
+  desligadas, inclusive "adicionar administradores".
+- Verificação no GitHub (run 36164976557): token aceito, canal encontrado, bot pode
+  publicar.
+- O dono do canal e do bot é a conta pessoal do Henrique, e ele aceitou esse risco. O bot
+  não tem acesso às conversas dele.
 - [ ] Entrar no Telegram Web (https://web.telegram.org), lendo o QR code com o celular.
   Precisa já ter Telegram no celular.
 - [ ] Falar com o @BotFather → `/newbot` → nome "Achadinhos pra Casa" → ele devolve o

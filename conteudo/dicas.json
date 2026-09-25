@@ -45,5 +45,171 @@
       ["Prateleira de baixo: carnes cruas", "Sempre em recipiente fechado. É a parte mais fria, e nada pinga nos outros alimentos."],
       ["Gavetas: frutas e verduras", "Cada uma na sua gaveta."]
     ]
+  },
+  {
+    "slug": "gavetas-cozinha-5-truques",
+    "titulo": "5 truques pra organizar as gavetas da cozinha",
+    "resumo": "Tudo à mão, nada misturado.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/gavetas-cozinha-5-truques.jpg",
+    "itens": [
+      ["Esvazie e separe por uso", "Talheres do dia a dia, utensílios de cozinhar e o que quase nunca sai da gaveta."],
+      ["Use divisórias", "Organizadores de bambu ou de plástico impedem que tudo se misture."],
+      ["O mais usado fica mais perto", "A gaveta perto do fogão é dos utensílios de todo dia."],
+      ["Guarde em pé o que é achatado", "Tábuas e assadeiras ocupam menos espaço na vertical."],
+      ["Uma gaveta, uma função", "Talheres numa, panos em outra: você acha tudo sem procurar."]
+    ]
+  },
+  {
+    "slug": "dobra-em-pe-gavetas",
+    "titulo": "Dobra em pé: organize as gavetas em 5 passos",
+    "resumo": "Você vê todas as peças de uma vez, sem desmontar a pilha.",
+    "categoria": "Guarda-roupa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/dobra-em-pe-gavetas.jpg",
+    "itens": [
+      ["Dobre em retângulo", "Com a camiseta aberta, as mangas vão para dentro e ela vira um retângulo liso."],
+      ["Dobre de novo até ficar firme", "Em duas ou três partes, até a peça parar em pé sozinha."],
+      ["Guarde como num fichário", "As peças ficam em pé, uma atrás da outra, e não empilhadas."],
+      ["Separe por tipo", "Camisetas, bermudas e pijamas, cada um na sua fileira."],
+      ["Use caixas nas gavetas fundas", "Uma caixa sem tampa segura as peças em pé."]
+    ]
+  },
+  {
+    "slug": "banheiro-pequeno-6-ideias",
+    "titulo": "6 ideias de organização pro banheiro pequeno",
+    "resumo": "Mais espaço sem quebrar parede.",
+    "categoria": "Banheiro",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/banheiro-pequeno-6-ideias.jpg",
+    "itens": [
+      ["Prateleira acima do vaso", "Aproveita a parede que quase ninguém usa."],
+      ["Cestos por categoria", "Cabelo, maquiagem, remédios: cada um no seu cesto."],
+      ["Ganchos atrás da porta", "Toalhas, roupão e bolsos para o que é pequeno."],
+      ["Suporte de canto no box", "Xampu e sabonete fora do chão."],
+      ["Bandeja na bancada", "Agrupa o que fica à vista e facilita a limpeza."],
+      ["Toalhas enroladas", "Enroladas, cabem mais toalhas na mesma prateleira."]
+    ]
+  },
+  {
+    "slug": "lavanderia-5-ideias",
+    "titulo": "Área de serviço organizada: 5 ideias simples",
+    "resumo": "Pequena, mas sem bagunça.",
+    "categoria": "Lavanderia",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/lavanderia-5-ideias.jpg",
+    "itens": [
+      ["Prateleira acima da máquina", "Os produtos ficam à mão e saem do chão."],
+      ["Um cesto para cada lavagem", "Roupa branca, colorida e escura já separadas."],
+      ["Potes iguais e etiquetados", "Sabão e amaciante em potes iguais ocupam menos espaço."],
+      ["Varal retrátil de parede", "Some quando não está em uso."],
+      ["Ganchos para vassoura e rodo", "Fora do chão, eles secam mais rápido e não tombam."]
+    ]
+  },
+  {
+    "slug": "debaixo-da-pia-5-ideias",
+    "titulo": "Debaixo da pia sem bagunça: 5 ideias",
+    "resumo": "O armário que todo mundo evita abrir.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/debaixo-da-pia-5-ideias.jpg",
+    "itens": [
+      ["Tire tudo e descarte o que acabou", "Embalagem vazia e produto vencido não voltam para o armário."],
+      ["Organizador de dois andares", "Contorna o encanamento e dobra o espaço."],
+      ["Ganchos na porta", "Luvas e panos pendurados na parte de dentro."],
+      ["Uma bandeja no fundo", "Protege o armário se algo vazar."],
+      ["Trava de segurança", "Com criança pequena em casa, produto de limpeza fica trancado."]
+    ]
+  },
+  {
+    "slug": "temperos-5-dicas",
+    "titulo": "Temperos organizados: 5 dicas pra achar tudo rápido",
+    "resumo": "Achar o orégano sem revirar tudo.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/temperos-5-dicas.jpg",
+    "itens": [
+      ["Potes iguais e etiquetados", "Mesmo tamanho encaixa melhor e fica bonito."],
+      ["Etiqueta na tampa, se ficam na gaveta", "Você lê o nome olhando de cima."],
+      ["Suporte em degraus", "Os potes de trás ficam à vista."],
+      ["Uma ordem só", "Alfabética ou pelos que você mais usa."],
+      ["Longe do fogão", "Calor e vapor tiram o sabor dos temperos."]
+    ]
+  },
+  {
+    "slug": "limpeza-semanal-cozinha",
+    "titulo": "Checklist de limpeza semanal da cozinha (7 tarefas)",
+    "resumo": "Um checklist pra não esquecer nada.",
+    "categoria": "Limpeza",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/limpeza-semanal-cozinha.jpg",
+    "itens": [
+      ["Micro-ondas por dentro", "Uma tigela com água e limão aquecida por alguns minutos amolece a sujeira."],
+      ["Geladeira sem vencidos", "Tire o que passou do prazo antes das compras da semana."],
+      ["Frente dos armários e puxadores", "É onde a mão encosta o tempo todo."],
+      ["Escorredor de louça", "Lave também a bandeja de baixo, onde a água para."],
+      ["Grelhas e queimadores do fogão", "Sujeira fresca sai muito mais fácil."],
+      ["Panos e esponja", "Troque os panos e a esponja com frequência."],
+      ["Lixeira", "Lave e seque antes de colocar o saco novo."]
+    ]
+  },
+  {
+    "slug": "panelas-e-tampas-5-truques",
+    "titulo": "Panelas e tampas organizadas: 5 truques",
+    "resumo": "Chega de avalanche ao abrir o armário.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/panelas-e-tampas-5-truques.jpg",
+    "itens": [
+      ["Empilhe por tamanho", "Da maior para a menor, uma dentro da outra."],
+      ["Tampas em pé", "Um porta-tampas ou um suporte de pratos segura as tampas na vertical."],
+      ["Proteja as antiaderentes", "Um pano ou feltro entre elas evita riscos."],
+      ["Formas e assadeiras num divisor", "Em pé, você tira uma sem desmontar a pilha."],
+      ["Menos é mais", "Doe as panelas repetidas que ninguém usa."]
+    ]
+  },
+  {
+    "slug": "hall-de-entrada-5-ideias",
+    "titulo": "Entrada da casa organizada: 5 ideias",
+    "resumo": "Chave, bolsa e sapato no lugar.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/hall-de-entrada-5-ideias.jpg",
+    "itens": [
+      ["Ganchos na parede", "Chaves e bolsas sempre no mesmo lugar."],
+      ["Sapateira ou bandeja", "Sapato molhado não suja o resto da casa."],
+      ["Bandeja para correspondências", "Conta e carta não se espalham pela mesa."],
+      ["Cesto para o que sai com você", "Guarda-chuva e sacolas retornáveis perto da porta."],
+      ["Só o da estação", "O casaco de inverno vai para o armário no verão."]
+    ]
+  },
+  {
+    "slug": "bancada-cozinha-livre",
+    "titulo": "Bancada da cozinha livre: 5 regras simples",
+    "resumo": "Mais espaço pra cozinhar, menos pra limpar.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/bancada-cozinha-livre.jpg",
+    "itens": [
+      ["À vista, só o de todo dia", "Cafeteira, fruteira e pouco mais."],
+      ["Uma bandeja para óleo, sal e azeite", "Sai inteira na hora de limpar."],
+      ["Utensílios num pote perto do fogão", "Colher de pau e espátula sempre à mão."],
+      ["Eletrodoméstico pouco usado vai pro armário", "Se sai uma vez por mês, não precisa ocupar a bancada."],
+      ["Limpe ao terminar", "Dois minutos agora poupam meia hora depois."]
+    ]
+  },
+  {
+    "slug": "roupa-de-cama-truque-fronha",
+    "titulo": "O truque da fronha: roupa de cama organizada em 3 passos",
+    "resumo": "O jogo de cama inteiro sempre junto.",
+    "categoria": "Quarto",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/roupa-de-cama-truque-fronha.jpg",
+    "itens": [
+      ["Dobre as peças do jogo", "Lençol de baixo, lençol de cima e uma das fronhas."],
+      ["Guarde tudo dentro da outra fronha", "O jogo completo vira um pacote só."],
+      ["Etiquete por cama", "Casal, solteiro, visita: você pega o jogo certo de primeira."]
+    ]
   }
 ]

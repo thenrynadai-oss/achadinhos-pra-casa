@@ -74,9 +74,16 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
 
 ## Estado
 
-- 2026-09-25: **Telegram pausado.** O Henrique não quer arriscar a conta pessoal do Telegram,
-  que ele usa no trabalho. O workflow `telegram.yml` foi desligado no GitHub; o código
-  continua no repositório.
+- 2026-09-25: **Semana 1 aprovada pelo Henrique** (`conteudo/fila/2026-09-26.json`). São 14 Pins
+  de dica, 2 por dia de 26/09 a 02/10, às 12h15 e 20h30, e 7 posts no Telegram às 19h30.
+  O Pinterest recebeu o perfil `achadinhospracasa`, e o "Criar Pins em massa" existe na
+  conta nova (Configurações → Importar conteúdo → Carregar arquivo .csv). A verificação do
+  site ficou pendente, porque a aba ficava escondida.
+- 2026-09-25: **Telegram pronto.** Canal `@achadinhospracasa_oficial` e bot
+  `@Achadinhospracasa_oficial_bot`, este só com permissão de publicar. A verificação no
+  GitHub passou. O workflow roda a cada 15 minutos e publica os lotes aprovados. (Chegou a
+  ser pausado por receio de usar a conta pessoal; o Henrique decidiu seguir depois de
+  entender que o bot não acessa as conversas dele.)
 
 - 2026-09-25: site no ar em https://thenrynadai-oss.github.io/achadinhos-pra-casa/. Commit
   `46fd8a7`: Pins em JPG (113 a 213 KB), CSV do Pinterest e robô do Telegram. O robô rodou no
