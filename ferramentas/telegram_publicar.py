@@ -8,6 +8,7 @@ igual no PC:
     python ferramentas/telegram_publicar.py --ensaio --agora 2026-09-29T19:31
                                                               -> finge que é essa hora (Brasília)
     ... --fila <pasta>                                         -> usa outra pasta de fila
+    python ferramentas/telegram_publicar.py --verificar        -> confere token e canal, sem publicar
 
 Precisa de TELEGRAM_TOKEN (do @BotFather) e TELEGRAM_CANAL (@nome ou -100...) no
 ambiente. Sem token, ele avisa e sai sem erro, para o agendamento não falhar enquanto o
@@ -83,6 +84,27 @@ def chamar_api(token: str, metodo: str, campos: dict) -> dict:
         return json.loads(erro.read() or b"{}") or {"ok": False, "description": f"HTTP {erro.code}"}
 
 
+def verificar(token: str, canal: str) -> int:
+    """Confere token, canal e permissão do bot sem publicar nada. Não imprime o token."""
+    eu = chamar_api(token, "getMe", {})
+    if not eu.get("ok"):
+        print(f"ERRO: o Telegram recusou o token ({eu.get('description', 'sem descrição')}).")
+        return 1
+    bot = eu["result"]
+    print(f"ok  token aceito: bot @{bot['username']}")
+    chat = chamar_api(token, "getChat", {"chat_id": canal})
+    if not chat.get("ok"):
+        print(f"ERRO: canal '{canal}' não encontrado ({chat.get('description', 'sem descrição')}).")
+        return 1
+    print(f"ok  canal encontrado: {chat['result'].get('title')} ({chat['result'].get('type')})")
+    membro = chamar_api(token, "getChatMember", {"chat_id": canal, "user_id": bot["id"]}).get("result", {})
+    if membro.get("status") != "administrator" or not membro.get("can_post_messages"):
+        print(f"ERRO: o bot está no canal como '{membro.get('status', 'fora do canal')}', sem permissão de publicar.")
+        return 1
+    print("ok  o bot é administrador e pode publicar. Tudo pronto.")
+    return 0
+
+
 def ler_registro() -> dict:
     return json.loads(REGISTRO.read_text(encoding="utf-8")) if REGISTRO.exists() else {}
 
@@ -93,6 +115,13 @@ def gravar_registro(registro: dict) -> None:
 
 
 def main(argv: list[str]) -> int:
+    if "--verificar" in argv:
+        token, canal = os.environ.get("TELEGRAM_TOKEN", ""), os.environ.get("TELEGRAM_CANAL", "")
+        if not (token and canal):
+            print("ERRO: faltam os segredos TELEGRAM_TOKEN e/ou TELEGRAM_CANAL.")
+            return 1
+        return verificar(token, canal)
+
     ensaio = "--ensaio" in argv
     agora = tempo.agora()
     if "--agora" in argv:

@@ -74,9 +74,14 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
 
 ## Estado
 
-- 2026-09-25: site no ar em https://thenrynadai-oss.github.io/achadinhos-pra-casa/ (commit
-  `22c71b1`). Pins em JPG (113 a 213 KB). Gerador do CSV do Pinterest e robô do Telegram
-  prontos e testados em ensaio. Nada publicado em rede social ainda, e nenhuma conta criada.
+- 2026-09-25: **Telegram pausado.** O Henrique não quer arriscar a conta pessoal do Telegram,
+  que ele usa no trabalho. O workflow `telegram.yml` foi desligado no GitHub; o código
+  continua no repositório.
+
+- 2026-09-25: site no ar em https://thenrynadai-oss.github.io/achadinhos-pra-casa/. Commit
+  `46fd8a7`: Pins em JPG (113 a 213 KB), CSV do Pinterest e robô do Telegram. O robô rodou no
+  GitHub sem token, respondeu no horário de Brasília e não publicou nada, como devia. Nada
+  publicado em rede social ainda, e nenhuma conta criada.
 
 ## Estrutura
 

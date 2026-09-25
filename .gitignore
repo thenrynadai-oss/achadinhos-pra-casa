@@ -1,6 +1,8 @@
-# chaves de acesso nunca entram no repositório
+# chaves de acesso nunca entram no repositório (ele é público)
 .env
 *.env
+secrets/
+*token*
 
 # rascunhos e arquivos intermediários
 pins/_build/
