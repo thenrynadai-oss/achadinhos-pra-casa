@@ -92,6 +92,9 @@ def verificar(token: str, canal: str) -> int:
         return 1
     bot = eu["result"]
     print(f"ok  token aceito: bot @{bot['username']}")
+    if not canal:
+        print("ERRO: falta o segredo TELEGRAM_CANAL (o @ do canal).")
+        return 1
     chat = chamar_api(token, "getChat", {"chat_id": canal})
     if not chat.get("ok"):
         print(f"ERRO: canal '{canal}' não encontrado ({chat.get('description', 'sem descrição')}).")
@@ -117,10 +120,10 @@ def gravar_registro(registro: dict) -> None:
 def main(argv: list[str]) -> int:
     if "--verificar" in argv:
         token, canal = os.environ.get("TELEGRAM_TOKEN", ""), os.environ.get("TELEGRAM_CANAL", "")
-        if not (token and canal):
-            print("ERRO: faltam os segredos TELEGRAM_TOKEN e/ou TELEGRAM_CANAL.")
+        if not token:
+            print("ERRO: falta o segredo TELEGRAM_TOKEN.")
             return 1
-        return verificar(token, canal)
+        return verificar(token, canal)  # testa o token mesmo sem canal: é assim que se descobre o @ do bot
 
     ensaio = "--ensaio" in argv
     agora = tempo.agora()
