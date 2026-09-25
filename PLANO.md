@@ -58,9 +58,11 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
 - **Fila:** `conteudo/fila/AAAA-MM-DD.json`, um lote por semana (o formato está em
   `ferramentas/fila.py`). O lote nasce com `aprovado_em: null`. Só depois do "aprovado" no
   chat eu preencho a data, e só aí ele pode ser publicado.
-- **Pinterest:** `python ferramentas/pinterest_csv.py` gera `saida/pinterest-<data>.csv`.
-  Ele é enviado pelo menu "Criar Pins em massa" do Pinterest Business: um upload por
-  semana. A data vai em UTC, e a conversão já está feita e testada. Pin marcado para menos
+- **Pinterest:** `python ferramentas/pinterest_csv.py --lote <semana>` gera
+  `saida/pinterest-lote-<semana>.csv`. Ele é enviado pelo menu "Criar Pins em massa" do
+  Pinterest Business: um upload por semana. Cada CSV leva um lote só: o lote anterior já foi
+  enviado e ainda tem Pins no futuro, e misturar os dois criaria esses Pins em dobro. Se mais
+  de um lote tiver Pins no futuro e o `--lote` faltar, o gerador se recusa. A data vai em UTC, e a conversão já está feita e testada. Pin marcado para menos
   de 3 horas depois da geração fica de fora do CSV (aparece como FORA), porque o Pinterest
   leva cerca de 2 horas para criar os Pins depois do upload.
 - **Telegram:** o workflow `telegram.yml` roda a cada 15 minutos no GitHub. Ele publica o
@@ -70,8 +72,9 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   faz commit na `main`. Nunca `--force`.
 - **Atenção:** o GitHub desliga agendamento de repositório público depois de 60 dias sem
   atividade. Os commits do robô contam como atividade.
-- **Testes:** `python ferramentas/testes.py` roda 15 testes: fuso (inclusive horário de
-  verão, virada de dia em UTC e diferença entre instantes), fila, CSV e robô. Diferença de
+- **Testes:** `python ferramentas/testes.py` roda 16 testes: fuso (inclusive horário de
+  verão, virada de dia em UTC e diferença entre instantes), fila, CSV (inclusive a recusa
+  de misturar lotes) e robô. Diferença de
   horário só por `tempo.diferenca`, que conta em UTC. Um deles falha se aparecer fuso fixo ou
   soma de 24h em qualquer ferramenta. O workflow `testes.yml` roda tudo a cada push.
 
@@ -80,8 +83,18 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
 - 2026-09-25: **Semana 1 aprovada pelo Henrique** (`conteudo/fila/2026-09-26.json`). São 14 Pins
   de dica, 2 por dia de 26/09 a 02/10, às 12h15 e 20h30, e 7 posts no Telegram às 19h30.
   O Pinterest recebeu o perfil `achadinhospracasa`, e o "Criar Pins em massa" existe na
-  conta nova (Configurações → Importar conteúdo → Carregar arquivo .csv). A verificação do
-  site ficou pendente, porque a aba ficava escondida.
+  conta nova (Configurações → Importar conteúdo → Carregar arquivo .csv).
+- 2026-09-25: **CSV da semana 1 enviado e conferido.** Os 15 Pins programados (14 da semana e
+  1 de teste) aparecem com o dia e a hora de Brasília aprovados.
+- 2026-09-25: **Site reivindicado no Pinterest** (Configurações → Link para o Pinterest →
+  Sites), pela tag HTML, commit `737953c`. O endereço precisa da barra no fim
+  (`.../achadinhos-pra-casa/`); sem ela, o Pinterest não verifica. O Pinterest volta a
+  conferir a tag de tempos em tempos, então `pinterest_verificacao` em `conteudo/site.json`
+  não pode ser apagado.
+- 2026-09-25: **Semana 2 aprovada pelo Henrique** (`conteudo/fila/2026-10-03.json`). São 14
+  Pins de dica com temas novos, de 03/10 a 09/10, às 12h15 e 20h30, e 7 posts no Telegram
+  às 19h30. Continua só com dicas porque a Shopee ainda analisa a inscrição; o lote 3 entra
+  com produto se ela aprovar. O site vai a 28 dicas.
 - 2026-09-25: **Telegram pronto.** Canal `@achadinhospracasa_oficial` e bot
   `@Achadinhospracasa_oficial_bot`, este só com permissão de publicar. A verificação no
   GitHub passou. O workflow roda a cada 15 minutos e publica os lotes aprovados. (Chegou a

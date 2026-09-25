@@ -211,5 +211,218 @@
       ["Guarde tudo dentro da outra fronha", "O jogo completo vira um pacote só."],
       ["Etiquete por cama", "Casal, solteiro, visita: você pega o jogo certo de primeira."]
     ]
+  },
+  {
+    "slug": "limpar-geladeira-6-passos",
+    "titulo": "Como limpar a geladeira em 6 passos",
+    "resumo": "Brilhando em meia hora, sem produto caro.",
+    "categoria": "Limpeza",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/limpar-geladeira-6-passos.jpg",
+    "itens": [
+      ["Desligue e esvazie", "Tire a geladeira da tomada, tire tudo de dentro e aproveite para jogar fora o que venceu ou estragou."],
+      ["Caixa térmica para os perecíveis", "Carnes, laticínios e congelados esperam na caixa térmica enquanto você limpa."],
+      ["Prateleiras e gavetas na pia", "Lave com água morna e detergente neutro. Água quente, nunca: o vidro gelado pode trincar."],
+      ["Bicarbonato por dentro", "Uma colher de sopa de bicarbonato em um litro de água morna limpa as paredes e ajuda a tirar o cheiro."],
+      ["Seque antes de ligar", "Passe um pano seco em tudo. A umidade que fica vira gelo e mofo."],
+      ["Guarde já organizando", "O que vence primeiro vai na frente, e cada tipo de alimento volta para a sua prateleira."]
+    ]
+  },
+  {
+    "slug": "rotina-15-minutos",
+    "titulo": "Rotina de 15 minutos por dia pra casa arrumada",
+    "resumo": "Uma rotina curta que evita a faxina gigante.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/rotina-15-minutos.jpg",
+    "itens": [
+      ["Louça em dia", "Lavada, no escorredor ou na máquina. Pia vazia de noite muda a manhã seguinte."],
+      ["Bancada livre", "Guarde o que ficou fora e passe um pano. É o lugar da casa que mais junta bagunça."],
+      ["Cada coisa no seu lugar", "Dê uma volta pela casa e devolva ao lugar o que está fora dele: controle, sapato, casaco."],
+      ["Roupa suja no cesto", "Nada de roupa na cadeira. O cesto evita a montanha do fim de semana."],
+      ["Lixo para fora", "Lixeira cheia sai no mesmo dia, antes de dar cheiro."],
+      ["Use um cronômetro", "Quinze minutos e acabou. Com hora para terminar, fica mais fácil começar."]
+    ]
+  },
+  {
+    "slug": "marmitas-congeladas-5-regras",
+    "titulo": "Marmitas congeladas: 5 regras pra durar e não perder o sabor",
+    "resumo": "Cozinhe no domingo, coma bem a semana toda.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/marmitas-congeladas-5-regras.jpg",
+    "itens": [
+      ["Esfriar rápido", "Deixe a comida amornar fora do fogo, mas leve ao freezer em até 2 horas. Porções pequenas esfriam mais rápido."],
+      ["Potes iguais", "Potes do mesmo tamanho e com tampa empilham melhor e aproveitam o espaço do freezer."],
+      ["Nome e data", "Uma etiqueta ou um pedaço de fita crepe na tampa: você sabe o que tem e desde quando, sem abrir."],
+      ["Até 3 meses", "Marmita caseira mantém a qualidade por uns 3 meses no freezer. O que entrou primeiro sai primeiro."],
+      ["Descongelar na geladeira", "Tire do freezer na noite anterior e deixe na geladeira, e não na pia. O que descongelou deve ser consumido, e não congelado de novo."]
+    ]
+  },
+  {
+    "slug": "potes-hermeticos-5-dicas",
+    "titulo": "Potes herméticos: 5 dicas pra escolher e organizar",
+    "resumo": "Mantimento fresco e despensa bonita.",
+    "categoria": "Despensa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/potes-hermeticos-5-dicas.jpg",
+    "itens": [
+      ["Vidro ou plástico", "Vidro não pega cheiro nem mancha e vai ao micro-ondas sem a tampa. Plástico é mais leve e não quebra se cair."],
+      ["Quadrado ganha do redondo", "Potes quadrados encostam uns nos outros e aproveitam melhor a prateleira."],
+      ["Vedação de verdade", "Tampa com anel de silicone e travas mantém arroz, café e biscoito frescos e longe de bichinhos."],
+      ["Poucos tamanhos", "Dois ou três tamanhos, todos da mesma linha, empilham melhor do que muitos potes diferentes."],
+      ["Etiqueta com validade", "Anote o nome e a validade do pacote antes de jogar a embalagem fora."]
+    ]
+  },
+  {
+    "slug": "home-office-pequeno-5-ideias",
+    "titulo": "Home office pequeno e organizado: 5 ideias",
+    "resumo": "Trabalhar em casa sem fio pra todo lado.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/home-office-pequeno-5-ideias.jpg",
+    "itens": [
+      ["Mesa com o essencial", "Computador, um bloco e uma caneca. O resto vai para gavetas e prateleiras."],
+      ["Tomadas embaixo do tampo", "Uma régua de tomadas presa embaixo da mesa tira os fios do chão e da vista."],
+      ["Cabos juntos", "Velcro ou presilhas juntam os cabos atrás do monitor, e uma fita com o nome evita puxar o fio errado."],
+      ["Use a parede", "Prateleira ou nicho acima da mesa guarda livros e papéis sem ocupar o tampo."],
+      ["Caixa dos carregadores", "Carregadores, fones e cabos soltos numa caixa só, com etiqueta."]
+    ]
+  },
+  {
+    "slug": "armario-loucas-5-ideias",
+    "titulo": "Armário de louças organizado: 5 ideias simples",
+    "resumo": "Pratos, copos e xícaras sem pilha torta.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/armario-loucas-5-ideias.jpg",
+    "itens": [
+      ["Altura dos olhos", "Os pratos e copos de todo dia ficam na prateleira mais fácil de alcançar."],
+      ["Pratos em pé", "Um porta-pratos dentro do armário ocupa menos espaço, e você tira um prato sem desmontar a pilha."],
+      ["Prateleira extra", "Uma prateleira de arame dentro do armário cria um segundo andar para pires e pratos de sobremesa."],
+      ["Xícaras nos ganchos", "Ganchos presos embaixo da prateleira seguram as xícaras e liberam espaço."],
+      ["Louça de festa lá no alto", "O que sai só em data especial vai numa caixa na parte mais alta."]
+    ]
+  },
+  {
+    "slug": "guarda-roupa-pequeno-6-ideias",
+    "titulo": "Guarda-roupa pequeno: 6 ideias pra caber mais",
+    "resumo": "Cabe mais sem trocar de armário.",
+    "categoria": "Guarda-roupa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/guarda-roupa-pequeno-6-ideias.jpg",
+    "itens": [
+      ["Cabides finos e iguais", "Cabides de veludo ou finos ocupam menos espaço e deixam as peças alinhadas."],
+      ["Fora de estação, fora do armário", "Casaco no verão e roupa leve no inverno vão para caixas embaixo da cama."],
+      ["Colmeias nas gavetas", "Organizadores tipo colmeia separam roupa íntima e meias, e nada se mistura."],
+      ["Porta que trabalha", "Ganchos na parte de dentro da porta seguram bolsas, cintos e lenços."],
+      ["Por tipo e por cor", "Primeiro camisetas, calças e vestidos; dentro de cada grupo, por cor. Achar fica muito mais rápido."],
+      ["Destralhe por estação", "A cada troca de estação, doe o que você não usou na última."]
+    ]
+  },
+  {
+    "slug": "lixo-reciclavel-cozinha",
+    "titulo": "Lixo reciclável na cozinha pequena: 5 ideias",
+    "resumo": "Separar o lixo sem ocupar a cozinha inteira.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/lixo-reciclavel-cozinha.jpg",
+    "itens": [
+      ["Lixeira de dois compartimentos", "Um lado para orgânico e outro para reciclável, no espaço de uma lixeira."],
+      ["Saco atrás da porta", "Sem espaço no chão? Um saco pendurado na porta do armário da pia guarda os recicláveis."],
+      ["Enxágue as embalagens", "Uma água rápida tira o resto de comida. Sem resto, o reciclável não dá cheiro nem atrai bicho."],
+      ["Amasse e desmonte", "Garrafas amassadas e caixas desmontadas ocupam bem menos espaço."],
+      ["Saiba o dia da coleta", "O site da prefeitura informa o dia da coleta seletiva na sua rua. Se não houver, procure um ponto de entrega perto de casa."]
+    ]
+  },
+  {
+    "slug": "kit-limpeza-basico",
+    "titulo": "Kit de limpeza básico: 6 itens que limpam a casa toda",
+    "resumo": "Poucos produtos que dão conta da casa toda.",
+    "categoria": "Limpeza",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/kit-limpeza-basico.jpg",
+    "itens": [
+      ["Detergente neutro", "Serve para louça, bancada, piso e quase tudo que não precisa de desinfecção."],
+      ["Multiuso", "Para a gordura do dia a dia no fogão, na coifa e nos azulejos."],
+      ["Água sanitária", "Para banheiro, ralos e panos, sempre diluída como manda o rótulo. Nunca misture com vinagre, amoníaco ou outro produto: a mistura solta gases tóxicos."],
+      ["Vinagre de álcool", "Com água, deixa vidros e box sem marcas."],
+      ["Bicarbonato", "Tira cheiro da geladeira e ajuda com a sujeira grudada na pia e no fogão."],
+      ["Panos de cores diferentes", "Uma cor para a cozinha e outra para o banheiro: o pano do vaso nunca chega à bancada."]
+    ]
+  },
+  {
+    "slug": "sapatos-organizados-5-ideias",
+    "titulo": "Sapatos organizados: 5 ideias pra casa pequena",
+    "resumo": "Nada de pé trocado no fundo do armário.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/sapatos-organizados-5-ideias.jpg",
+    "itens": [
+      ["Atrás da porta", "Uma sapateira vertical de pendurar aproveita um espaço que ninguém usa."],
+      ["Um pra frente, outro pra trás", "Guardar o par com os pés invertidos ocupa menos largura na prateleira."],
+      ["Caixas transparentes", "Para os sapatos de festa: protegidos da poeira e à vista."],
+      ["Os da semana na entrada", "Só os que você está usando ficam perto da porta. O resto vai para o armário."],
+      ["Limpo e seco", "Guarde sempre limpo e seco, com um sachê de sílica na caixa ou na prateleira para evitar mofo."]
+    ]
+  },
+  {
+    "slug": "armario-alto-cozinha",
+    "titulo": "Armário alto da cozinha: 5 jeitos de aproveitar",
+    "resumo": "A parte da cozinha que ninguém alcança.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/armario-alto-cozinha.jpg",
+    "itens": [
+      ["O que você usa pouco", "Forma de festa, panela grande e o estoque de mantimentos vão para o alto."],
+      ["Cestos com alça", "Você puxa um cesto e desce tudo de uma vez, sem precisar tirar item por item."],
+      ["Etiqueta grande", "Na frente do cesto, com letra grande o bastante para ler lá de baixo."],
+      ["Banquinho por perto", "Um banquinho dobrável guardado ao lado da geladeira evita subir na cadeira."],
+      ["Prateleira extra", "Uma prateleira de arame divide a altura do armário e acaba com a pilha que desaba."]
+    ]
+  },
+  {
+    "slug": "brinquedos-organizados-5-ideias",
+    "titulo": "Brinquedos organizados: 5 ideias que a criança consegue seguir",
+    "resumo": "A criança acha, brinca e guarda sozinha.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/brinquedos-organizados-5-ideias.jpg",
+    "itens": [
+      ["Na altura da criança", "Nicho ou estante baixa, sempre presa na parede: criança escala."],
+      ["Caixas por tipo", "Carrinhos numa caixa, bonecas em outra, blocos em outra. Guardar vira jogo de encaixar."],
+      ["Etiqueta com desenho", "Um desenho ou uma foto além do nome: quem ainda não lê também sabe onde guardar."],
+      ["Rodízio de brinquedos", "Parte dos brinquedos fica guardada e volta depois de algumas semanas, como novidade."],
+      ["Doação duas vezes por ano", "Antes do aniversário e do Natal, escolham juntos o que vai para outra criança."]
+    ]
+  },
+  {
+    "slug": "documentos-da-casa-5-passos",
+    "titulo": "Documentos da casa organizados em 5 passos",
+    "resumo": "Achar o papel certo em um minuto.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/documentos-da-casa-5-passos.jpg",
+    "itens": [
+      ["Tudo num lugar só", "Junte os papéis espalhados por gavetas, bolsas e pastas antes de começar."],
+      ["Separe por assunto", "Documentos pessoais, casa, saúde, carro e imposto de renda."],
+      ["Pasta sanfonada", "Uma divisão para cada assunto. Cabe numa prateleira e sai inteira se você precisar."],
+      ["Cópia na nuvem", "Fotografe RG, CPF, certidões e contratos e guarde as fotos numa pasta na nuvem."],
+      ["O que pode ir embora", "Contas pagas: quando chegar a declaração anual de quitação da empresa, os comprovantes daquele ano podem ir embora. Imposto de renda: guarde a declaração e os comprovantes por 5 anos."]
+    ]
+  },
+  {
+    "slug": "sacolas-plasticas-4-jeitos",
+    "titulo": "Sacolas plásticas organizadas: 4 jeitos de acabar com o bolo",
+    "resumo": "Chega da sacola cheia de sacolas.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-09-25",
+    "imagem": "img/pins/sacolas-plasticas-4-jeitos.jpg",
+    "itens": [
+      ["Puxa-saco na porta", "Pendurado na porta do armário: a sacola entra por cima e sai por baixo."],
+      ["Dobra em triângulo", "Dobre como bandeira: cada sacola vira um pacotinho que cabe numa caixa pequena."],
+      ["Tenha um limite", "Guarde só o que cabe no puxa-saco. O que sobrar vai para a reciclagem."],
+      ["Retornáveis à mão", "Deixe sacolas retornáveis na entrada ou no carro e traga menos sacolas para casa."]
+    ]
   }
 ]

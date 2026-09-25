@@ -1,11 +1,16 @@
 """Gera o CSV de "Criar Pins em massa" do Pinterest a partir da fila aprovada.
 
 Uso:
-    python ferramentas/pinterest_csv.py              -> só lotes aprovados, Pins ainda no futuro
-    python ferramentas/pinterest_csv.py --ensaio     -> inclui lotes não aprovados (para revisar)
-    python ferramentas/pinterest_csv.py --ensaio --fila <pasta>   -> usa outra pasta de fila
+    python ferramentas/pinterest_csv.py --lote 2026-10-03   -> Pins aprovados e no futuro desse lote
+    python ferramentas/pinterest_csv.py                     -> idem, se só um lote tiver Pins no futuro
+    python ferramentas/pinterest_csv.py --ensaio ...        -> inclui lotes não aprovados (para revisar)
+    ... --fila <pasta>                                      -> usa outra pasta de fila
 
-O arquivo sai em saida/pinterest-AAAA-MM-DD.csv (a data é a de hoje em Brasília).
+O arquivo sai em saida/pinterest-lote-<lote>.csv.
+
+Um CSV é sempre de um lote só. O lote anterior já foi enviado ao Pinterest e ainda tem Pins
+no futuro durante a semana; misturar os dois criaria esses Pins em dobro. Por isso, se mais de
+um lote tiver Pins no futuro, o gerador se recusa até alguém dizer qual lote quer.
 
 Formato: o que a ajuda oficial do Pinterest pede. Colunas Title (até 100 caracteres),
 Media URL (endereço público da imagem), Pinterest board, Thumbnail (vazio para imagem),
@@ -52,21 +57,43 @@ def linha(post: fila.Post, pin: dict, base: str) -> dict:
     }
 
 
-def gerar(ensaio: bool = False, pasta: pathlib.Path = fila.PASTA_FILA) -> pathlib.Path | None:
+def nome_do_lote(lote: str) -> str:
+    """'2026-10-03' ou '2026-10-03.json' -> '2026-10-03.json', o nome do arquivo em conteudo/fila."""
+    return lote if lote.endswith(".json") else f"{lote}.json"
+
+
+def escolher(posts: list, agora, lote: str | None = None, ensaio: bool = False):
+    """Pins aprovados, no futuro e de um lote só. Devolve (vão no CSV, ficam fora pela MARGEM).
+    Função pura, sem arquivo nem rede."""
+    candidatos = [p for p in posts if p.canal == "pinterest" and (p.aprovado or ensaio) and p.momento > agora]
+    lotes = sorted({p.lote for p in candidatos})
+    if lote is None:
+        if len(lotes) > 1:
+            raise SystemExit(f"Há Pins no futuro em {len(lotes)} lotes ({', '.join(lotes)}). Um CSV leva um lote só, "
+                             "senão o lote já enviado sai em dobro. Escolha com --lote.")
+    else:
+        lote = nome_do_lote(lote)
+        if lote not in lotes:
+            raise SystemExit(f"O lote {lote} não tem Pin aprovado no futuro. Lotes com Pins a enviar: {', '.join(lotes) or 'nenhum'}.")
+        candidatos = [p for p in candidatos if p.lote == lote]
+    escolhidos = [p for p in candidatos if tempo.diferenca(p.momento, agora) >= MARGEM]
+    return escolhidos, [p for p in candidatos if p not in escolhidos]
+
+
+def gerar(ensaio: bool = False, pasta: pathlib.Path = fila.PASTA_FILA, lote: str | None = None) -> pathlib.Path | None:
     base = json.loads((RAIZ / "conteudo" / "site.json").read_text(encoding="utf-8"))["base_url"]
     pins = fila.pins_por_id()
     agora = tempo.agora()
-    candidatos = [p for p in fila.carregar(pasta) if p.canal == "pinterest" and (p.aprovado or ensaio) and p.momento > agora]
-    escolhidos = [p for p in candidatos if tempo.diferenca(p.momento, agora) >= MARGEM]
-    for p in candidatos:
-        if p not in escolhidos:
-            print(f"  FORA: {p.id} é para {tempo.texto_local(p.momento)}, a menos de {MARGEM} do upload; o Pinterest pode não criar a tempo")
+    escolhidos, fora = escolher(fila.carregar(pasta), agora, lote, ensaio)
+    for p in fora:
+        print(f"  FORA: {p.id} é para {tempo.texto_local(p.momento)}, a menos de {MARGEM} do upload; o Pinterest pode não criar a tempo")
     if not escolhidos:
         print("Nenhum Pin aprovado e no futuro. Nada a gerar.")
         return None
     if len(escolhidos) > LIMITE_LINHAS:
         raise SystemExit(f"{len(escolhidos)} Pins: o Pinterest aceita {LIMITE_LINHAS} por arquivo.")
-    destino = RAIZ / "saida" / f"pinterest-{tempo.hoje()}{'-ensaio' if ensaio else ''}.csv"
+    nome = escolhidos[0].lote.removesuffix(".json")
+    destino = RAIZ / "saida" / f"pinterest-lote-{nome}{'-ensaio' if ensaio else ''}.csv"
     destino.parent.mkdir(exist_ok=True)
     with destino.open("w", encoding="utf-8", newline="") as f:
         escritor = csv.DictWriter(f, fieldnames=COLUNAS)
@@ -81,4 +108,5 @@ def gerar(ensaio: bool = False, pasta: pathlib.Path = fila.PASTA_FILA) -> pathli
 if __name__ == "__main__":
     argv = sys.argv[1:]
     pasta = pathlib.Path(argv[argv.index("--fila") + 1]) if "--fila" in argv else fila.PASTA_FILA
-    gerar(ensaio="--ensaio" in argv, pasta=pasta)
+    lote = argv[argv.index("--lote") + 1] if "--lote" in argv else None
+    gerar(ensaio="--ensaio" in argv, pasta=pasta, lote=lote)

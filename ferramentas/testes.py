@@ -57,12 +57,38 @@ def diferenca_entre_instantes_respeita_o_horario_de_verao():
     assert tempo.diferenca(tempo.instante("2026-09-29", "22:30"), tempo.instante("2026-09-29", "19:30")) == timedelta(hours=3)
 
 
+def pin_na_fila(pid, data, hora, lote, aprovado=True):
+    return fila.Post(pid, "pinterest", tempo.instante(data, hora), dict(PIN_OK, id=pid), lote=lote, aprovado=aprovado)
+
+
 @teste
 def csv_deixa_de_fora_pin_em_cima_da_hora():
     from datetime import timedelta
-    agora = tempo.agora()
     assert pinterest_csv.MARGEM >= timedelta(hours=2)  # o Pinterest leva ~2h para criar os Pins
-    assert tempo.diferenca(agora + timedelta(minutes=30), agora) < pinterest_csv.MARGEM
+    agora = tempo.instante("2026-10-03", "10:00")
+    vao, fora = pinterest_csv.escolher([pin_na_fila("cedo", "2026-10-03", "12:15", "s.json"),
+                                        pin_na_fila("tarde", "2026-10-03", "20:30", "s.json")], agora)
+    assert [p.id for p in vao] == ["tarde"] and [p.id for p in fora] == ["cedo"]
+
+
+@teste
+def csv_nunca_mistura_lotes():
+    # o lote 1 já foi enviado e ainda tem Pins no futuro: sem --lote, gerar o CSV duplicaria esses Pins
+    agora = tempo.instante("2026-09-28", "09:00")
+    posts = [pin_na_fila("s1-a", "2026-09-30", "12:15", "2026-09-26.json"),
+             pin_na_fila("s2-a", "2026-10-03", "12:15", "2026-10-03.json"),
+             pin_na_fila("s2-rascunho", "2026-10-04", "12:15", "2026-10-03.json", aprovado=False)]
+    try:
+        pinterest_csv.escolher(posts, agora)
+    except SystemExit as erro:
+        assert "--lote" in str(erro)
+    else:
+        raise AssertionError("gerou CSV misturando dois lotes")
+    vao, _ = pinterest_csv.escolher(posts, agora, lote="2026-10-03")
+    assert [p.id for p in vao] == ["s2-a"]
+    # com um lote só no futuro, não precisa escolher
+    vao, _ = pinterest_csv.escolher(posts, tempo.instante("2026-10-01", "09:00"))
+    assert [p.id for p in vao] == ["s2-a"]
 
 
 @teste
