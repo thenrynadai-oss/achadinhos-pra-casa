@@ -194,17 +194,27 @@ def post_tg(pid, hora, aprovado=True, **extra):
 
 @teste
 def telegram_publica_so_o_que_venceu_aprovado_e_ainda_nao_saiu():
-    agora = tempo.instante("2026-09-29", "19:40")
+    agora = tempo.instante("2026-09-29", "23:10")
     posts = [
-        post_tg("venceu", "19:30"),
-        post_tg("futuro", "20:00"),
+        post_tg("venceu", "18:00"),
+        post_tg("futuro", "23:30"),
         post_tg("atrasado-demais", "14:00"),
         post_tg("nao-aprovado", "19:00", aprovado=False),
-        post_tg("ja-saiu", "18:00"),
+        post_tg("ja-saiu", "17:00"),
     ]
     publicar, perdidos = tg.escolher(posts, {"ja-saiu": {"mensagem": 1}}, agora)
     assert [p.id for p in publicar] == ["venceu"]
     assert [p.id for p in perdidos] == ["atrasado-demais"]
+
+
+@teste
+def telegram_aguenta_o_atraso_real_do_github():
+    from datetime import timedelta
+    # medido de 25 a 28/09/2026: o agendamento do GitHub chegou a ficar 5h05 sem rodar
+    assert tg.JANELA >= timedelta(hours=6)
+    # um post das 18:00 que só é visto às 01:10 do dia seguinte ainda sai
+    publicar, perdidos = tg.escolher([post_tg("noite", "18:00")], {}, tempo.instante("2026-09-30", "01:10"))
+    assert [p.id for p in publicar] == ["noite"] and not perdidos
 
 
 @teste

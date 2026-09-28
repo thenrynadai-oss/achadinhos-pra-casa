@@ -1,7 +1,7 @@
 """Publica no canal do Telegram os posts aprovados cuja hora já chegou.
 
-Roda no GitHub Actions a cada 15 minutos (.github/workflows/telegram.yml), mas funciona
-igual no PC:
+Roda no GitHub Actions (.github/workflows/telegram.yml), que foi agendado para cada 15
+minutos mas na prática roda a cada 2,5 a 6 horas; funciona igual no PC:
 
     python ferramentas/telegram_publicar.py                    -> publica o que venceu
     python ferramentas/telegram_publicar.py --ensaio           -> só mostra o que publicaria
@@ -36,7 +36,9 @@ import tempo
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 REGISTRO = RAIZ / "conteudo" / "publicados" / "telegram.json"
-JANELA = timedelta(hours=3)
+# O agendamento do GitHub não é pontual: de 25 a 28/09/2026 o maior intervalo entre duas
+# execuções foi de 5h05. Com 8 horas, um post das 18:00 sai no máximo até as 02:00.
+JANELA = timedelta(hours=8)
 LIMITE_LEGENDA = 1024  # limite do Telegram para legenda de foto
 
 

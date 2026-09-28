@@ -65,16 +65,22 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   de um lote tiver Pins no futuro e o `--lote` faltar, o gerador se recusa. A data vai em UTC, e a conversão já está feita e testada. Pin marcado para menos
   de 3 horas depois da geração fica de fora do CSV (aparece como FORA), porque o Pinterest
   leva cerca de 2 horas para criar os Pins depois do upload.
-- **Telegram:** o workflow `telegram.yml` roda a cada 15 minutos no GitHub. Ele publica o
-  que venceu e registra em `conteudo/publicados/telegram.json` com um commit do robô, para
-  nunca repetir post. Post atrasado mais de 3 horas não sai: fica marcado como perdido.
+- **Telegram:** o workflow `telegram.yml` está agendado para cada 15 minutos no GitHub. Ele
+  publica o que venceu e registra em `conteudo/publicados/telegram.json` com um commit do
+  robô, para nunca repetir post.
+  - **Na prática, o GitHub não roda a cada 15 minutos.** Medido de 25 a 28/09/2026: foram
+    23 execuções, com intervalos de 2,5 a 6 horas. Os dois primeiros posts, marcados para
+    19:30, saíram às 20:54 e às 22:10.
+  - Por isso, desde 28/09 os posts ficam na fila às **18:00** e a tolerância é de **8 horas**.
+    Post que passar disso é marcado como perdido, e não sai de madrugada.
+  - Horário exato só com um disparador externo. Fica para quando o canal tiver audiência.
 - **Antes de qualquer push meu:** `git fetch` e `git pull --rebase`, porque o robô também
   faz commit na `main`. Nunca `--force`.
 - **Atenção:** o GitHub desliga agendamento de repositório público depois de 60 dias sem
   atividade. Os commits do robô contam como atividade.
-- **Testes:** `python ferramentas/testes.py` roda 16 testes: fuso (inclusive horário de
+- **Testes:** `python ferramentas/testes.py` roda 17 testes: fuso (inclusive horário de
   verão, virada de dia em UTC e diferença entre instantes), fila, CSV (inclusive a recusa
-  de misturar lotes) e robô. Diferença de
+  de misturar lotes) e robô (inclusive o atraso real do agendamento do GitHub). Diferença de
   horário só por `tempo.diferenca`, que conta em UTC. Um deles falha se aparecer fuso fixo ou
   soma de 24h em qualquer ferramenta. O workflow `testes.yml` roda tudo a cada push.
 

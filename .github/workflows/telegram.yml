@@ -1,7 +1,9 @@
 name: Publicar no Telegram
 
-# O GitHub roda agendamentos em UTC e pode atrasar alguns minutos. O horário de cada post
-# está na fila em horário de Brasília; o script decide o que já venceu.
+# O GitHub roda agendamentos em UTC e não garante horário. Medido de 25 a 28/09/2026: em
+# vez de a cada 15 minutos, rodou com intervalos de 2,5 a 6 horas. Por isso o post fica
+# na fila às 18:00 e a JANELA do script é de 8 horas. O horário de cada post está na fila
+# em horário de Brasília; o script decide o que já venceu.
 on:
   schedule:
     - cron: "7,22,37,52 * * * *"
