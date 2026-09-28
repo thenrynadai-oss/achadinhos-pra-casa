@@ -74,13 +74,31 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - Por isso, desde 28/09 os posts ficam na fila às **18:00** e a tolerância é de **8 horas**.
     Post que passar disso é marcado como perdido, e não sai de madrugada.
   - Horário exato só com um disparador externo. Fica para quando o canal tiver audiência.
+- **Produtos:** ficam em `conteudo/produtos.json`.
+  - **Escolha:** nota de pelo menos 4,7, mil vendidos ou mais, e resolver o problema de uma
+    dica que já está no site.
+  - **Link de afiliado:** sai do painel da Shopee, em "Link personalizado", com o Sub_id 1
+    marcando a origem: `site` para o botão da página e `telegram` para o post. Assim o
+    relatório da Shopee mostra qual canal vende.
+  - **Foto:** `python ferramentas/fotos_produtos.py` baixa uma cópia da foto da loja para
+    `site/img/produtos/`. Se a loja trocar a foto, a página continua de pé.
+  - **Pin do produto:** usa o modelo `pins/modelos/produto.html` e leva à página do produto
+    no site, nunca direto à loja.
+  - **Aviso:** o `verificar_site.py` barra o site se um link de loja estiver sem
+    `rel="sponsored"` ou se a página não tiver o aviso de afiliado. Um teste faz o mesmo com os
+    posts do Telegram.
+  - **Comissão extra da loja:** desde 01/08/2026 é paga sem retenção de imposto. Aceita pelo
+    Henrique em 28/09. Confirmar com contador quando o valor ficar relevante.
 - **Antes de qualquer push meu:** `git fetch` e `git pull --rebase`, porque o robô também
   faz commit na `main`. Nunca `--force`.
 - **Atenção:** o GitHub desliga agendamento de repositório público depois de 60 dias sem
   atividade. Os commits do robô contam como atividade.
-- **Testes:** `python ferramentas/testes.py` roda 17 testes: fuso (inclusive horário de
-  verão, virada de dia em UTC e diferença entre instantes), fila, CSV (inclusive a recusa
-  de misturar lotes) e robô (inclusive o atraso real do agendamento do GitHub). Diferença de
+- **Testes:** `python ferramentas/testes.py` roda 18 testes:
+  - fuso: horário de verão, virada de dia em UTC e diferença entre instantes;
+  - fila;
+  - CSV, inclusive a recusa de misturar lotes;
+  - robô, inclusive o atraso real do agendamento do GitHub;
+  - aviso de afiliado nos posts com link de loja. Diferença de
   horário só por `tempo.diferenca`, que conta em UTC. Um deles falha se aparecer fuso fixo ou
   soma de 24h em qualquer ferramenta. O workflow `testes.yml` roda tudo a cada push.
 
@@ -101,6 +119,15 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   Pins de dica com temas novos, de 03/10 a 09/10, às 12h15 e 20h30, e 7 posts no Telegram
   às 19h30. Continua só com dicas porque a Shopee ainda analisa a inscrição; o lote 3 entra
   com produto se ela aprovar. O site vai a 28 dicas.
+- 2026-09-25: **Shopee Afiliados aprovou a inscrição.** Ainda faltam o cadastro de
+  pagamento e fiscal (é do Henrique) e a ligação Pinterest ↔ Shopee, que ainda mostra "Link".
+- 2026-09-28: **Semana 3 aprovada** (`conteudo/fila/2026-10-10.json`), a primeira com
+  produto:
+  - 7 dicas às 12h15 e 7 achadinhos da Shopee às 20h30, de 10/10 a 16/10;
+  - o achadinho do dia no Telegram às 18h;
+  - o site chega a 35 dicas e 7 produtos;
+  - cada produto está ligado a uma dica (campo `dica`), e a dica mostra o bloco "Achadinho que
+    ajuda nessa dica".
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
   primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
   pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.

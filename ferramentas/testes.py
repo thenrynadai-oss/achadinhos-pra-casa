@@ -228,6 +228,16 @@ def telegram_escapa_html_e_usa_enderecos_publicos():
     assert "https://exemplo.github.io/site/dicas/despensa-5-passos/" in campos["reply_markup"]
 
 
+@teste
+def post_com_link_de_loja_avisa_que_e_afiliado():
+    # vale para a fila de verdade: todo post do Telegram com botão para loja traz o aviso
+    loja = re.compile(r"https?://([a-z0-9-]+\.)*(shopee\.com\.br|mercadolivre\.com\.br|amazon\.com\.br)/")
+    sem_aviso = [p.id for p in fila.carregar() if p.canal == "telegram"
+                 and loja.match((p.dados.get("botao") or {}).get("link", ""))
+                 and "Link de afiliado" not in p.dados["texto"]]
+    assert not sem_aviso, sem_aviso
+
+
 def main():
     falhas = 0
     for t in TESTES:

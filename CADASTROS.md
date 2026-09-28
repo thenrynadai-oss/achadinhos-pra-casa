@@ -26,7 +26,8 @@ clicar em "autorizar acesso". Por isso esses passos estão todos aqui, juntos, n
 
 ### 2. Shopee Afiliados (candidatura 10 min; pagamento 15 min + app) — o que demora
 - [x] Candidatura em https://affiliate.shopee.com.br com o login da sua conta Shopee.
-  **Enviada em 2026-09-25** (conta Individual). A tela confirmou "Cadastro enviado com
+  **Enviada e aprovada em 2026-09-25** (conta Individual). O painel ainda pede o cadastro
+  de pagamento e fiscal. A tela confirmou "Cadastro enviado com
   sucesso", e a resposta chega no e-mail cadastrado. Se não vier nada em 3 dias, a própria
   Shopee manda falar com o atendimento.
   - Redes ligadas: o site e o canal do Telegram. O Pinterest **não entra como link**: o

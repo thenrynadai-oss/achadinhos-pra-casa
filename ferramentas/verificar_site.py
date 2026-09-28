@@ -12,11 +12,15 @@ from urllib.parse import urlsplit, unquote
 SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 
 
+LOJA = re.compile(r"^https?://([a-z0-9-]+\.)*(shopee\.com\.br|mercadolivre\.com\.br|mercadolivre\.com|amazon\.com\.br)(/|$)")
+
+
 class Coletor(HTMLParser):
     def __init__(self):
         super().__init__()
         self.refs = []
         self.ids = set()
+        self.links_de_loja = []  # (href, rel)
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
@@ -25,6 +29,8 @@ class Coletor(HTMLParser):
         for campo in ("href", "src"):
             if a.get(campo):
                 self.refs.append((tag, a[campo]))
+        if tag == "a" and LOJA.match(a.get("href") or ""):
+            self.links_de_loja.append((a["href"], a.get("rel") or ""))
 
 
 def alvo_existe(pagina: pathlib.Path, ref: str) -> bool:
@@ -47,6 +53,12 @@ def main():
         for tag, ref in coletor.refs:
             if not alvo_existe(pagina, ref):
                 problemas.append(f"{pagina.relative_to(SITE)}: <{tag}> aponta para '{ref}', que não existe")
+        # link de afiliado: o Google pede rel="sponsored", e o leitor tem que ser avisado na página
+        for href, rel in coletor.links_de_loja:
+            if "sponsored" not in rel.split():
+                problemas.append(f"{pagina.relative_to(SITE)}: link de loja sem rel=\"sponsored\" ({href})")
+        if coletor.links_de_loja and "Link de afiliado" not in texto:
+            problemas.append(f"{pagina.relative_to(SITE)}: tem link de loja e não tem o aviso de afiliado")
         if "${" in texto:
             problemas.append(f"{pagina.relative_to(SITE)}: sobrou um campo de modelo sem preencher")
         if not re.search(r"<title>[^<]+</title>", texto):

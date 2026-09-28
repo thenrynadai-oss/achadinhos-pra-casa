@@ -1,1 +1,121 @@
-[]
+[
+  {
+    "slug": "porta-temperos-giratorio",
+    "nome": "Porta-temperos giratório com 12 potes",
+    "categoria": "Cozinha",
+    "foto": "img/produtos/porta-temperos-giratorio.jpg",
+    "por_que": "Os 12 potes ficam à vista numa base que gira: você acha o orégano de primeira, sem revirar o armário. É a dica dos potes iguais e etiquetados, pronta.",
+    "dica": "temperos-5-dicas",
+    "links": {
+      "shopee": "https://s.shopee.com.br/6L4nPt0ind"
+    },
+    "shopee": {
+      "itemid": "23493668850",
+      "shopid": "754144273",
+      "imagem": "br-11134207-7r98o-m6o8n18vriw7d7"
+    },
+    "adicionado_em": "2026-09-28"
+  },
+  {
+    "slug": "porta-talheres-bambu-extensivel",
+    "nome": "Porta-talheres de bambu extensível",
+    "categoria": "Cozinha",
+    "foto": "img/produtos/porta-talheres-bambu-extensivel.jpg",
+    "por_que": "Ele abre até ocupar a largura da gaveta, então nada escorrega para os lados, e as 7 divisórias separam talheres, conchas e utensílios.",
+    "dica": "gavetas-cozinha-5-truques",
+    "links": {
+      "shopee": "https://s.shopee.com.br/6AlNDa1M8c"
+    },
+    "shopee": {
+      "itemid": "23898764911",
+      "shopid": "1298416721",
+      "imagem": "br-11134207-7r98o-mcustse9d6pea0"
+    },
+    "adicionado_em": "2026-09-28"
+  },
+  {
+    "slug": "organizador-geladeira-acrilico",
+    "nome": "Organizador de geladeira com tampa e escorredor",
+    "categoria": "Cozinha",
+    "foto": "img/produtos/organizador-geladeira-acrilico.jpg",
+    "por_que": "Um pote transparente de 2,2 litros com cesto escorredor: fruta e verdura lavadas ficam longe da água que junta no fundo, e você vê o que tem sem abrir.",
+    "dica": "geladeira-cada-prateleira",
+    "links": {
+      "shopee": "https://s.shopee.com.br/60Rx1H1zTb"
+    },
+    "shopee": {
+      "itemid": "23794280418",
+      "shopid": "691142802",
+      "imagem": "sg-11134201-7reoj-mduoq6vfyxwz9b"
+    },
+    "adicionado_em": "2026-09-28"
+  },
+  {
+    "slug": "potes-hermeticos-quadrados",
+    "nome": "Kit de potes herméticos quadrados",
+    "categoria": "Despensa",
+    "foto": "img/produtos/potes-hermeticos-quadrados.jpg",
+    "por_que": "Potes quadrados e transparentes, com tampa hermética: aproveitam melhor a prateleira que os redondos e mostram o que está acabando. O tamanho do kit você escolhe na loja.",
+    "dica": "potes-hermeticos-5-dicas",
+    "links": {
+      "shopee": "https://s.shopee.com.br/7AduPPxY6q"
+    },
+    "shopee": {
+      "itemid": "22493170764",
+      "shopid": "318621368",
+      "imagem": "br-11134207-7r98o-m9q7qrqauqrmd0"
+    },
+    "adicionado_em": "2026-09-28"
+  },
+  {
+    "slug": "cabides-veludo-slim",
+    "nome": "Kit 50 cabides de veludo slim",
+    "categoria": "Guarda-roupa",
+    "foto": "img/produtos/cabides-veludo-slim.jpg",
+    "por_que": "Finos e antideslizantes: ocupam menos espaço no cabideiro e a roupa não escorrega. Trocar os cabides por modelos iguais é a primeira ideia do guarda-roupa pequeno.",
+    "dica": "guarda-roupa-pequeno-6-ideias",
+    "links": {
+      "shopee": "https://s.shopee.com.br/70KUD6yBRp"
+    },
+    "shopee": {
+      "itemid": "58256596821",
+      "shopid": "1005356303",
+      "imagem": "br-11134207-820ls-mlmd9hzb3bie1b"
+    },
+    "adicionado_em": "2026-09-28"
+  },
+  {
+    "slug": "sapateira-vertical-porta",
+    "nome": "Sapateira vertical para atrás da porta",
+    "categoria": "Casa",
+    "foto": "img/produtos/sapateira-vertical-porta.jpg",
+    "por_que": "Bolsos de pendurar atrás da porta, com ganchos que acompanham: os sapatos saem do chão e usam um espaço que ninguém aproveita. Tem versões de 16, 20 e 24 bolsos.",
+    "dica": "sapatos-organizados-5-ideias",
+    "links": {
+      "shopee": "https://s.shopee.com.br/2LYeeYobak"
+    },
+    "shopee": {
+      "itemid": "10851591127",
+      "shopid": "341540478",
+      "imagem": "br-11134207-820mg-mnvuxximws1wb1"
+    },
+    "adicionado_em": "2026-09-28"
+  },
+  {
+    "slug": "prateleira-canto-vidro-box",
+    "nome": "Kit 2 prateleiras de vidro de canto para o box",
+    "categoria": "Banheiro",
+    "foto": "img/produtos/prateleira-canto-vidro-box.jpg",
+    "por_que": "Duas prateleiras de canto que tiram shampoo e sabonete do chão do box, no espaço que sobra entre as paredes. É a ideia do suporte de canto, do banheiro pequeno.",
+    "dica": "banheiro-pequeno-6-ideias",
+    "links": {
+      "shopee": "https://s.shopee.com.br/2Vs4qrnyFn"
+    },
+    "shopee": {
+      "itemid": "22392817012",
+      "shopid": "437209894",
+      "imagem": "sg-11134201-7rcbv-ltwgem0hzqvt25"
+    },
+    "adicionado_em": "2026-09-28"
+  }
+]

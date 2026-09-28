@@ -424,5 +424,109 @@
       ["Tenha um limite", "Guarde só o que cabe no puxa-saco. O que sobrar vai para a reciclagem."],
       ["Retornáveis à mão", "Deixe sacolas retornáveis na entrada ou no carro e traga menos sacolas para casa."]
     ]
+  },
+  {
+    "slug": "destralhe-30-dias",
+    "titulo": "Desafio de 30 dias pra destralhar a casa",
+    "resumo": "Um pouquinho por dia, sem maratona: um cômodo por semana, 15 minutos por dia.",
+    "categoria": "Casa",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/destralhe-30-dias.jpg",
+    "itens": [
+      ["Semana 1: cozinha", "Potes sem tampa, tampas sem pote, utensílios repetidos e o que você não usa há meses."],
+      ["Semana 2: guarda-roupa", "O que não serve, o que não usou no último ano e o que está esperando conserto há tempo demais."],
+      ["Semana 3: banheiro", "Produtos vencidos, amostras, restos de embalagem e toalhas gastas."],
+      ["Semana 4: sala e papéis", "Revistas, manuais, contas antigas e o que ficou sem lugar."],
+      ["Últimos dias: dar destino", "Doe, venda ou recicle o que separou, antes que volte para dentro dos armários. Três caixas ajudam o mês inteiro: fica, doa, lixo."]
+    ]
+  },
+  {
+    "slug": "quarto-pequeno-6-ideias",
+    "titulo": "Quarto pequeno organizado: 6 ideias pra ganhar espaço",
+    "resumo": "Mais espaço sem trocar de quarto.",
+    "categoria": "Quarto",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/quarto-pequeno-6-ideias.jpg",
+    "itens": [
+      ["Embaixo da cama", "Cama com baú, ou caixas com tampa embaixo dela, para roupa de cama e o que está fora de estação."],
+      ["Prateleira na parede", "Acima da cama ou da escrivaninha, no lugar de um móvel que ocuparia o chão."],
+      ["Cabideiro de parede", "Para a roupa que você vai usar amanhã, que assim não vai parar na cadeira."],
+      ["Luz de parede", "Uma luminária de parede libera espaço na mesa de cabeceira."],
+      ["Espelho na porta", "Ocupa zero espaço no chão e faz o quarto parecer maior."],
+      ["Cesto do meio-termo", "Um cesto só para a roupa já usada que ainda não vai para lavar. A cadeira agradece."]
+    ]
+  },
+  {
+    "slug": "pia-do-banheiro-5-ideias",
+    "titulo": "Pia do banheiro organizada: 5 ideias pra bancada livre",
+    "resumo": "Bancada livre em cinco minutos por dia.",
+    "categoria": "Banheiro",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/pia-do-banheiro-5-ideias.jpg",
+    "itens": [
+      ["Bandeja", "Reúne o sabonete e o que você usa todo dia. Na hora de limpar, sai inteira."],
+      ["Escovas longe do vaso", "Num copo ou suporte, do lado mais distante do vaso sanitário, e com a cabeça para cima para secar."],
+      ["O resto dentro do armário", "Remédio, maquiagem e o que você não usa todo dia não ficam em cima da pia."],
+      ["Potinho para miudezas", "Grampos, elásticos e cotonetes num pote pequeno com tampa."],
+      ["Seque depois de usar", "Um pano rápido na pia evita mancha de água e limo."]
+    ]
+  },
+  {
+    "slug": "bolsas-organizadas-5-ideias",
+    "titulo": "Bolsas organizadas: 5 ideias pra guardar sem amassar",
+    "resumo": "Nada de bolsa amassada no fundo do armário.",
+    "categoria": "Guarda-roupa",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/bolsas-organizadas-5-ideias.jpg",
+    "itens": [
+      ["Em pé, lado a lado", "Numa prateleira, uma ao lado da outra, com divisórias para não tombarem."],
+      ["Recheio", "Papel ou uma camiseta velha dentro da bolsa ajuda a não perder a forma."],
+      ["Ganchos atrás da porta", "Para as bolsas do dia a dia, que você pega e devolve sem abrir o armário."],
+      ["Saquinho para as de festa", "Um saquinho de tecido protege da poeira as que você usa pouco."],
+      ["Esvazie ao chegar", "Chave, carteira e óculos têm lugar fixo em casa, e a bolsa não vira depósito."]
+    ]
+  },
+  {
+    "slug": "toalhas-dobradas-3-jeitos",
+    "titulo": "Como dobrar toalhas: 3 jeitos que ocupam menos espaço",
+    "resumo": "O armário do banheiro com cara de hotel.",
+    "categoria": "Banheiro",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/toalhas-dobradas-3-jeitos.jpg",
+    "itens": [
+      ["Em rolinho", "Dobre ao meio no comprimento e enrole. Cabe em cesto e em prateleira funda, e você tira uma sem desmanchar as outras."],
+      ["Em três", "Dobre em três no comprimento e depois em três de novo. As pilhas ficam retas e iguais."],
+      ["Em pé na gaveta", "Como a dobra das camisetas: você vê todas de uma vez. Guarde sempre bem seca, para não pegar cheiro de umidade."]
+    ]
+  },
+  {
+    "slug": "maquiagem-organizada-5-ideias",
+    "titulo": "Maquiagem organizada: 5 ideias pra achar tudo rápido",
+    "resumo": "Tudo à vista e nada vencido.",
+    "categoria": "Beleza",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/maquiagem-organizada-5-ideias.jpg",
+    "itens": [
+      ["Dia a dia e ocasião", "O que você usa todo dia fica à mão. O de festa vai para uma caixa separada."],
+      ["Pincéis em pé", "Num copo, com as cerdas para cima: secam melhor e não deformam."],
+      ["Divisórias", "Batons em pé, sombras e bases deitadas, cada tipo no seu espaço."],
+      ["Validade depois de aberto", "O símbolo do potinho aberto na embalagem diz quantos meses o produto dura depois de aberto. Passou, descarte."],
+      ["Longe do vapor", "Calor e umidade do banho estragam a maquiagem mais rápido. Se puder, guarde fora do banheiro."]
+    ]
+  },
+  {
+    "slug": "mesa-de-cabeceira-5-ideias",
+    "titulo": "Mesa de cabeceira organizada: 5 ideias simples",
+    "resumo": "Só o que você usa antes de dormir.",
+    "categoria": "Quarto",
+    "publicada_em": "2026-09-28",
+    "imagem": "img/pins/mesa-de-cabeceira-5-ideias.jpg",
+    "itens": [
+      ["Três coisas em cima", "Luminária, o livro da vez e um copo d'água. O resto vai para a gaveta."],
+      ["Fio no lugar", "O carregador fica preso atrás da mesa, com o fio sem cair no chão."],
+      ["Bandejinha", "Óculos, anel e relógio num lugar só, e você não procura nada de manhã."],
+      ["Gaveta organizada", "Um organizador pequeno separa remédio, creme e protetor de ouvido."],
+      ["Toda noite", "O que não é do quarto volta para o lugar antes de dormir."]
+    ]
   }
 ]

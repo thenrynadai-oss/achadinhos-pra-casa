@@ -88,12 +88,38 @@ class Gerador:
             f'<h3><a href="{raiz}dicas/{e(d["slug"])}/">{e(d["titulo"])}</a></h3></div></article>'
         )
 
+    @staticmethod
+    def src(foto: str, raiz: str) -> str:
+        """A foto do produto mora no site (img/produtos/); endereço absoluto também vale."""
+        return foto if foto.startswith("http") else raiz + foto
+
+    def botoes_loja(self, p):
+        return "".join(
+            f'<a class="botao" href="{e(p["links"][loja])}" target="_blank" rel="sponsored noopener">{rotulo}</a> '
+            for loja, rotulo in LOJAS.items() if p["links"].get(loja)
+        )
+
     def card_produto(self, p, raiz=""):
         return (
-            f'<article class="card"><img src="{e(p["foto"])}" alt="" loading="lazy">'
+            f'<article class="card produto"><img src="{e(self.src(p["foto"], raiz))}" alt="" loading="lazy">'
             f'<div class="card-texto"><span class="chip">{e(p["categoria"])}</span>'
             f'<h3><a href="{raiz}achadinhos/{e(p["slug"])}/">{e(p["nome"])}</a></h3></div></article>'
         )
+
+    def achadinhos_da_dica(self, d, raiz):
+        """Bloco no fim da dica com os produtos que resolvem o mesmo problema."""
+        produtos = [p for p in self.produtos if p.get("dica") == d["slug"]]
+        if not produtos:
+            return ""
+        itens = "".join(
+            f'<div class="achadinho"><img src="{e(self.src(p["foto"], raiz))}" alt="{e(p["nome"])}" loading="lazy">'
+            f'<div><h3><a href="{raiz}achadinhos/{e(p["slug"])}/">{e(p["nome"])}</a></h3>'
+            f'<p>{e(p["por_que"])}</p>{self.botoes_loja(p)}</div></div>'
+            for p in produtos
+        )
+        return (f'<section class="achadinhos-da-dica"><h2>Achadinho que ajuda nessa dica</h2>{itens}'
+                f'<p class="meta">Link de afiliado: a loja nos paga uma pequena comissão se você comprar, sem mudar o seu preço.</p>'
+                f'</section>')
 
     # ---------- páginas ----------
     def home(self):
@@ -123,6 +149,7 @@ class Gerador:
             f'<p class="meta">Publicado em {data_por_extenso(d["publicada_em"])}</p>'
             f'<p class="resumo">{e(d["resumo"])}</p><ol class="passos">{passos}</ol>'
             f'<a class="botao" href="{e(salvar)}" target="_blank" rel="noopener">Salvar no Pinterest</a>'
+            f"{self.achadinhos_da_dica(d, raiz)}"
             f"</div></article></div>"
         )
         meta = (f'<meta property="og:image" content="{e(img_abs)}">\n'
@@ -133,20 +160,21 @@ class Gerador:
     def produto(self, p):
         caminho = f"achadinhos/{p['slug']}/"
         raiz = "../../"
-        botoes = "".join(
-            f'<a class="botao" href="{e(p["links"][loja])}" target="_blank" rel="sponsored noopener">{rotulo}</a> '
-            for loja, rotulo in LOJAS.items() if p["links"].get(loja)
-        )
+        dica = next((d for d in self.dicas if d["slug"] == p.get("dica")), None)
+        ligacao = (f'<p class="meta">Combina com a dica <a href="{raiz}dicas/{e(dica["slug"])}/">{e(dica["titulo"])}</a>.</p>'
+                   if dica else "")
         corpo = (
             f'<div class="largura"><p class="migalha"><a href="{raiz}">Início</a> › <a href="{raiz}#achadinhos">Achadinhos</a></p>'
-            f'<article class="artigo"><div class="pin"><img src="{e(p["foto"])}" alt="{e(p["nome"])}"></div>'
+            f'<article class="artigo"><div class="pin produto"><img src="{e(self.src(p["foto"], raiz))}" alt="{e(p["nome"])}"></div>'
             f'<div><span class="chip">{e(p["categoria"])}</span><h1>{e(p["nome"])}</h1>'
-            f'<p class="resumo">{e(p["por_que"])}</p>{botoes}'
-            f'<p class="meta">Link de afiliado: a loja nos paga uma pequena comissão se você comprar, sem mudar o seu preço.</p>'
+            f'<p class="resumo">{e(p["por_que"])}</p>{self.botoes_loja(p)}'
+            f'<p class="meta">Link de afiliado: a loja nos paga uma pequena comissão se você comprar, sem mudar o seu preço. '
+            f'O preço e a disponibilidade são os da loja no momento da compra.</p>{ligacao}'
             f"</div></article></div>"
         )
+        foto_abs = p["foto"] if p["foto"].startswith("http") else self.url(p["foto"])
         self.pagina(caminho, p["nome"], p["por_que"], corpo, og_tipo="product",
-                    meta_extra=f'<meta property="og:image" content="{e(p["foto"])}">', lastmod=p["adicionado_em"])
+                    meta_extra=f'<meta property="og:image" content="{e(foto_abs)}">', lastmod=p["adicionado_em"])
 
     def textos(self):
         sobre = (
