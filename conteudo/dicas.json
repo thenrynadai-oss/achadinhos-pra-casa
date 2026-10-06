@@ -528,5 +528,113 @@
       ["Gaveta organizada", "Um organizador pequeno separa remédio, creme e protetor de ouvido."],
       ["Toda noite", "O que não é do quarto volta para o lugar antes de dormir."]
     ]
+  },
+  {
+    "slug": "guardar-roupas-de-inverno",
+    "titulo": "Como guardar as roupas de inverno: 6 passos",
+    "resumo": "Para elas voltarem inteiras no ano que vem.",
+    "categoria": "Guarda-roupa",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/guardar-roupas-de-inverno.jpg",
+    "itens": [
+      ["Lave antes de guardar", "Mancha e cheiro de suor atraem traça e, com os meses, a mancha não sai mais."],
+      ["Só guarde seco", "Qualquer umidade vira mofo dentro da caixa. Na dúvida, mais um dia no varal."],
+      ["Malha dobrada, nunca no cabide", "Pendurada por meses, a malha estica e deforma o ombro."],
+      ["Caixa ou saco que respira", "Caixa organizadora ou saco de TNT. Saco a vácuo vai bem para edredom e cobertor sintético; lã e pena guardam melhor em saco de tecido."],
+      ["Um sachê contra traça", "Cravo-da-índia ou bolinhas de cedro num saquinho, dentro de cada caixa."],
+      ["Etiqueta e lá no alto", "Escreva o que tem em cada caixa e guarde na parte mais alta do guarda-roupa: é o que você não vai usar por meses."]
+    ]
+  },
+  {
+    "slug": "guardar-compras-do-mes",
+    "titulo": "Guardar as compras do mês em 5 passos",
+    "resumo": "Nada estraga esquecido no fundo do armário.",
+    "categoria": "Despensa",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/guardar-compras-do-mes.jpg",
+    "itens": [
+      ["Primeiro o que é gelado", "Congelados e refrigerados vão para a geladeira antes de qualquer outra sacola."],
+      ["O novo vai para trás", "O que você já tinha vem para a frente. Assim, o que vence antes sai antes."],
+      ["Carne já porcionada", "Divida em saquinhos do tamanho de uma refeição e escreva a data antes de congelar."],
+      ["Mantimento no pote", "Arroz, feijão e farinha vão para os potes. O resto do pacote fica fechado com um prendedor, com a validade à vista."],
+      ["Verdura fora do saco do mercado", "O saco plástico abafa e a folha murcha. Guarde como na nossa dica de frutas e verduras."]
+    ]
+  },
+  {
+    "slug": "frutas-e-verduras-duram-mais",
+    "titulo": "Frutas e verduras que duram mais: 6 truques",
+    "resumo": "Menos coisa estragada no fim da semana.",
+    "categoria": "Cozinha",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/frutas-e-verduras-duram-mais.jpg",
+    "itens": [
+      ["Folha lavada e bem seca", "Lave, seque bem e guarde num pote com uma folha de papel-toalha, que segura a umidade."],
+      ["Nem tudo vai para a geladeira", "Banana, tomate e abacate amadurecem melhor fora dela. Depois de maduros, podem ir para a geladeira."],
+      ["Maçã longe das outras", "Ela solta um gás que faz o resto amadurecer, e estragar, mais rápido."],
+      ["Cheiro-verde em pé", "Salsinha e coentro num copo com um dedo de água, na geladeira. O manjericão fica fora dela."],
+      ["Batata longe da cebola", "Juntas, a batata brota mais rápido. As duas em lugar escuro e ventilado."],
+      ["A gaveta certa", "Verdura na gaveta de baixo da geladeira, que é a mais úmida."]
+    ]
+  },
+  {
+    "slug": "remedios-organizados-5-passos",
+    "titulo": "Remédios organizados em casa: 5 passos",
+    "resumo": "Você acha o que precisa na hora em que precisa.",
+    "categoria": "Casa",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/remedios-organizados-5-passos.jpg",
+    "itens": [
+      ["Fora do banheiro", "O vapor do banho e o calor estragam o remédio. Prefira um armário fresco e seco."],
+      ["Uma caixa com divisórias", "Separe por uso: dor e febre, estômago, curativo e uso contínuo."],
+      ["Na caixa original", "A validade, o lote e a bula ficam na embalagem. Cartela solta vira mistério."],
+      ["Validade todo mês", "Confira uma vez por mês. Remédio vencido vai para a coleta da farmácia, não para o lixo."],
+      ["No alto", "Fora do alcance das crianças. Para o uso contínuo, um porta-comprimidos da semana."]
+    ]
+  },
+  {
+    "slug": "cabos-e-carregadores-5-ideias",
+    "titulo": "Cabos e carregadores organizados: 5 ideias",
+    "resumo": "Chega de gaveta com fio embolado.",
+    "categoria": "Casa",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/cabos-e-carregadores-5-ideias.jpg",
+    "itens": [
+      ["Um lugar só", "Uma caixa ou uma gaveta só para cabos. Nada de fio espalhado pela casa."],
+      ["Cada cabo enrolado", "Prenda com velcro, elástico ou até o lacre do pão de forma."],
+      ["Etiqueta na ponta", "Um pedaço de fita crepe dizendo de que aparelho ele é."],
+      ["O do dia a dia fica fixo", "O carregador de todo dia mora onde você carrega o celular: na cabeceira ou na sala."],
+      ["Cabo sem aparelho sai", "O que não serve em nada da casa vai para o descarte de eletrônicos."]
+    ]
+  },
+  {
+    "slug": "sala-pequena-6-ideias",
+    "titulo": "Sala pequena: 6 ideias pra ganhar espaço",
+    "resumo": "Parece maior sem quebrar parede.",
+    "categoria": "Casa",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/sala-pequena-6-ideias.jpg",
+    "itens": [
+      ["Sofá sem braço largo", "Braço fino ou sem braço ganha uns bons centímetros de assento."],
+      ["Espelho grande", "Na parede em frente à janela, ele espalha a luz e a sala parece maior."],
+      ["Móvel que guarda", "Puff com tampa e mesa de centro com espaço por dentro escondem manta e controle."],
+      ["Prateleira no alto", "Acima do sofá ou da TV, ela usa a parede e deixa o chão livre."],
+      ["Cortina do teto ao chão", "Cortina clara instalada lá em cima faz o pé-direito parecer mais alto."],
+      ["Um cesto para o que sobra", "Manta, controle e carregador vão para o cesto, e a sala fica arrumada em um minuto."]
+    ]
+  },
+  {
+    "slug": "varanda-pequena-5-ideias",
+    "titulo": "Varanda pequena: 5 ideias pra aproveitar",
+    "resumo": "Um cantinho de verdade, mesmo com pouco espaço.",
+    "categoria": "Casa",
+    "publicada_em": "2026-10-06",
+    "imagem": "img/pins/varanda-pequena-5-ideias.jpg",
+    "itens": [
+      ["Planta na vertical", "Floreira pendurada no guarda-corpo e prateleira na parede deixam o chão livre."],
+      ["Móvel que dobra", "Mesa de parede que rebate e cadeiras dobráveis: abrem na hora do café e somem depois."],
+      ["Tapete de área externa", "Com uma almofada, vira canto de leitura."],
+      ["Luz quentinha", "Um varal de lâmpadas muda a varanda à noite."],
+      ["Banco que é baú", "Senta e guarda: vaso vazio, adubo e regador ficam lá dentro."]
+    ]
   }
 ]

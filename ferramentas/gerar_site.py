@@ -157,6 +157,13 @@ class Gerador:
         self.pagina(caminho, d["titulo"], d["resumo"], corpo, og_tipo="article", meta_extra=meta,
                     lastmod=d["publicada_em"])
 
+    def aviso_amazon(self, p):
+        # o Contrato de Associados da Amazon exige este aviso onde houver link dela
+        if not p["links"].get("amazon"):
+            return ""
+        return ('<p class="meta">Na Amazon, o link leva a um modelo equivalente, de outro vendedor. '
+                'Como Associado da Amazon, recebo por compras qualificadas.</p>')
+
     def produto(self, p):
         caminho = f"achadinhos/{p['slug']}/"
         raiz = "../../"
@@ -169,7 +176,7 @@ class Gerador:
             f'<div><span class="chip">{e(p["categoria"])}</span><h1>{e(p["nome"])}</h1>'
             f'<p class="resumo">{e(p["por_que"])}</p>{self.botoes_loja(p)}'
             f'<p class="meta">Link de afiliado: a loja nos paga uma pequena comissão se você comprar, sem mudar o seu preço. '
-            f'O preço e a disponibilidade são os da loja no momento da compra.</p>{ligacao}'
+            f'O preço e a disponibilidade são os da loja no momento da compra.</p>{self.aviso_amazon(p)}{ligacao}'
             f"</div></article></div>"
         )
         foto_abs = p["foto"] if p["foto"].startswith("http") else self.url(p["foto"])
@@ -186,7 +193,7 @@ class Gerador:
             "e se ele faz mesmo o que promete. Não recebemos produtos de lojas para falar bem deles.</p>"
             "<h2>Como o site se mantém</h2>"
             "<p>Alguns links são de afiliado: se você comprar por eles, a loja nos paga uma pequena comissão. "
-            "O preço para você é o mesmo.</p></div>"
+            "O preço para você é o mesmo. Como Associado da Amazon, recebo por compras qualificadas.</p></div>"
         )
         self.pagina("sobre/", "Sobre", "Quem somos e como os achadinhos são escolhidos.", sobre)
         privacidade = (

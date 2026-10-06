@@ -128,6 +128,7 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - o site chega a 35 dicas e 7 produtos;
   - cada produto está ligado a uma dica (campo `dica`), e a dica mostra o bloco "Achadinho que
     ajuda nessa dica".
+- 2026-10-06: **CSV da semana 3 enviado** (`saida/pinterest-lote-2026-10-10.csv`, 14 Pins de 10/10 a 16/10, conta Achadinhos pra Casa). O Pinterest respondeu "Upload concluído" e cria os Pins em cerca de 2 horas; conferir os agendados. A semana 2 nunca foi enviada (as datas de 03 a 09/10 passaram).
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
   primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
   pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.
