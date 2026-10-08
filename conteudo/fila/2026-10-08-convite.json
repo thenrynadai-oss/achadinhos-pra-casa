@@ -1,0 +1,15 @@
+{
+  "semana": "2026-10-08-convite",
+  "nota": "Pedido do Henrique em 08/10 às 14:13: um Pin para daqui a 30 minutos. Convite novo para o canal do Telegram, com arte própria (os Pins de produto já estavam todos agendados). Enviado fora da margem de 3 horas do gerador: se o Pinterest terminar de criar depois das 14:45, o Pin sai assim que ficar pronto.",
+  "aprovado_em": "2026-10-08",
+  "posts": [
+    {
+      "id": "x-pin-convite-telegram-5",
+      "canal": "pinterest",
+      "data": "2026-10-08",
+      "hora": "14:45",
+      "pin": "convite-telegram-5",
+      "link": "telegram/"
+    }
+  ]
+}

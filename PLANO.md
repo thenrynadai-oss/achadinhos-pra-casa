@@ -168,7 +168,9 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - **Reforço do Pinterest** (`conteudo/fila/2026-10-09.json`, "pode subir um pouco mais"): segunda
     arte de 15 achadinhos novos e 2 convites do canal, de 09 a 15/10, somando 4 Pins por dia (5 em
     12/10) com os já agendados. Teto de 5 por dia: a conta tem 2 semanas e recebeu ~14 Pins de uma
-    vez em 08/10, quando a outra aba subiu a semana 2 com datas passadas.
+    vez em 08/10, quando a outra aba subiu a semana 2 com datas passadas. **CSV enviado** no mesmo
+    dia (`saida/pinterest-lote-2026-10-09.csv`, 17 Pins), conta Achadinhos pra Casa, depois de
+    conferir no ar as 17 imagens e as 17 páginas; o Pinterest respondeu "Upload concluído".
   - O cabeçalho do site estourava no celular (520 px numa tela de 375): no celular o menu
     passou para a segunda linha.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os

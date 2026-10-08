@@ -1150,5 +1150,22 @@
     "titulo_pin": "Achadinhos baratos pra casa: canal gratuito no Telegram",
     "palavras_chave": "achadinhos, achadinhos shopee, organização da casa, canal telegram",
     "descricao": "Dois achadinhos por dia pra casa e cozinha, com a foto e o link da loja, no nosso canal do Telegram. É um canal: ninguém vê o seu número, e você sai quando quiser. Os links são de afiliado: a loja nos paga uma pequena comissão, sem mudar o seu preço."
+  },
+  {
+    "id": "convite-telegram-5",
+    "modelo": "telegram",
+    "categoria": "Telegram",
+    "titulo": "Achadinhos novos hoje no Telegram",
+    "subtitulo": "Foto e link da loja, todo dia. É grátis",
+    "fotos_produtos": [
+      "img/produtos/saco-organizador-cobertor.jpg",
+      "img/produtos/porta-escovas-adesivo.jpg",
+      "img/produtos/suporte-tampa-panela.jpg",
+      "img/produtos/porta-talheres-bambu-extensivel.jpg"
+    ],
+    "pasta": "Casa organizada",
+    "titulo_pin": "Achadinhos novos pra casa hoje no nosso canal do Telegram",
+    "palavras_chave": "achadinhos, achadinhos shopee, organização da casa, canal telegram",
+    "descricao": "Dois achadinhos por dia pra casa e cozinha, com a foto e o link da loja, no nosso canal do Telegram. É um canal: ninguém vê o seu número, e você sai quando quiser. Os links são de afiliado: a loja nos paga uma pequena comissão, sem mudar o seu preço."
   }
 ]
