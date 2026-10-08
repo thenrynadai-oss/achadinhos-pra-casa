@@ -1,89 +1,128 @@
 {
   "semana": "2026-10-08",
-  "nota": "Telegram no formato novo, pedido do Henrique em 08/10: foto do produto, uma ou duas linhas que vendem, link direto da Shopee e #publi. Nada de explicar: a explicação está na página da loja. A Amazon nunca vai direto (regra da Central de Associados para app de mensagem): o botão 'Também tem na Amazon' leva à página do produto no site. Dois achadinhos por dia, 12:00 e 19:00, horário de Brasília. Substitui os posts s3-tg-* da semana 3.",
+  "nota": "Telegram no formato novo, pedido do Henrique em 08/10: foto do produto, uma ou duas linhas que vendem, link direto da Shopee e #publi. Nada de explicar: a explicação está na página da loja. A Amazon nunca vai direto (regra da Central de Associados para app de mensagem): o botão 'Também tem na Amazon' leva à página do produto no site. Dois achadinhos por dia, 12:00 e 19:00, horário de Brasília. Substitui os posts s3-tg-* da semana 3. Em 08/10 o Henrique pediu tudo no ar no mesmo dia, sem agendamento: os 7 posts passaram para 08/10 14:00.",
   "aprovado_em": "2026-10-08",
   "posts": [
     {
       "id": "tg-temperos",
       "canal": "telegram",
       "data": "2026-10-08",
-      "hora": "19:00",
+      "hora": "14:00",
       "imagem": "img/produtos/porta-temperos-giratorio.jpg",
       "texto": "🧂 Chega de caçar tempero no armário!\n\nPorta-temperos giratório com 12 potes: deu uma girada, achou.\n\n👉 https://s.shopee.com.br/7ptbCgGCaE\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/7ptbCgGCaE"},
-        {"rotulo": "Também tem na Amazon", "link": "achadinhos/porta-temperos-giratorio/"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/7ptbCgGCaE"
+        },
+        {
+          "rotulo": "Também tem na Amazon",
+          "link": "achadinhos/porta-temperos-giratorio/"
+        }
       ]
     },
     {
       "id": "tg-cabides",
       "canal": "telegram",
-      "data": "2026-10-09",
-      "hora": "12:00",
+      "data": "2026-10-08",
+      "hora": "14:00",
       "imagem": "img/produtos/cabides-veludo-slim.jpg",
       "texto": "👚 Mais espaço no guarda-roupa sem trocar de móvel.\n\nKit com 50 cabides de veludo slim: finos, e a roupa não escorrega.\n\n👉 https://s.shopee.com.br/5q8Wp0Nodu\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/5q8Wp0Nodu"},
-        {"rotulo": "Também tem na Amazon", "link": "achadinhos/cabides-veludo-slim/"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/5q8Wp0Nodu"
+        },
+        {
+          "rotulo": "Também tem na Amazon",
+          "link": "achadinhos/cabides-veludo-slim/"
+        }
       ]
     },
     {
       "id": "tg-sapateira",
       "canal": "telegram",
-      "data": "2026-10-09",
-      "hora": "19:00",
+      "data": "2026-10-08",
+      "hora": "14:00",
       "imagem": "img/produtos/sapateira-vertical-porta.jpg",
       "texto": "👟 Sapato espalhado pelo chão? Resolvido.\n\nSapateira de pendurar atrás da porta, com até 24 bolsos.\n\n👉 https://s.shopee.com.br/4fwZQrfO56\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/4fwZQrfO56"},
-        {"rotulo": "Também tem na Amazon", "link": "achadinhos/sapateira-vertical-porta/"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/4fwZQrfO56"
+        },
+        {
+          "rotulo": "Também tem na Amazon",
+          "link": "achadinhos/sapateira-vertical-porta/"
+        }
       ]
     },
     {
       "id": "tg-potes",
       "canal": "telegram",
-      "data": "2026-10-10",
-      "hora": "12:00",
+      "data": "2026-10-08",
+      "hora": "14:00",
       "imagem": "img/produtos/potes-hermeticos-quadrados.jpg",
       "texto": "🥫 Despensa arrumada de verdade.\n\nKit de potes herméticos quadrados: cabe mais na prateleira e você vê o que está acabando.\n\n👉 https://s.shopee.com.br/5LCGE5Pien\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/5LCGE5Pien"},
-        {"rotulo": "Também tem na Amazon", "link": "achadinhos/potes-hermeticos-quadrados/"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/5LCGE5Pien"
+        },
+        {
+          "rotulo": "Também tem na Amazon",
+          "link": "achadinhos/potes-hermeticos-quadrados/"
+        }
       ]
     },
     {
       "id": "tg-geladeira",
       "canal": "telegram",
-      "data": "2026-10-10",
-      "hora": "19:00",
+      "data": "2026-10-08",
+      "hora": "14:00",
       "imagem": "img/produtos/organizador-geladeira-acrilico.jpg",
       "texto": "🥬 Lavou, guardou, e a verdura não fica encharcada.\n\nPote de geladeira com tampa e escorredor, de 2,2 litros.\n\n👉 https://s.shopee.com.br/5VVgQOP5Jo\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/5VVgQOP5Jo"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/5VVgQOP5Jo"
+        }
       ]
     },
     {
       "id": "tg-talheres",
       "canal": "telegram",
-      "data": "2026-10-11",
-      "hora": "12:00",
+      "data": "2026-10-08",
+      "hora": "14:00",
       "imagem": "img/produtos/porta-talheres-bambu-extensivel.jpg",
       "texto": "🍴 Gaveta de talheres que fica arrumada sozinha.\n\nPorta-talheres de bambu que estica até a largura da gaveta: nada escorrega para o lado.\n\n👉 https://s.shopee.com.br/7faB0NGpvD\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/7faB0NGpvD"},
-        {"rotulo": "Também tem na Amazon", "link": "achadinhos/porta-talheres-bambu-extensivel/"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/7faB0NGpvD"
+        },
+        {
+          "rotulo": "Também tem na Amazon",
+          "link": "achadinhos/porta-talheres-bambu-extensivel/"
+        }
       ]
     },
     {
       "id": "tg-prateleira-box",
       "canal": "telegram",
-      "data": "2026-10-11",
-      "hora": "19:00",
+      "data": "2026-10-08",
+      "hora": "14:00",
       "imagem": "img/produtos/prateleira-canto-vidro-box.jpg",
       "texto": "🚿 Shampoo no chão do box, nunca mais.\n\nKit com 2 prateleiras de vidro de canto, no espaço que sobra entre as paredes.\n\n👉 https://s.shopee.com.br/4qFzdAekk9\n\n#publi · manda pra quem precisa 😉",
       "botoes": [
-        {"rotulo": "🛒 Comprar na Shopee", "link": "https://s.shopee.com.br/4qFzdAekk9"},
-        {"rotulo": "Também tem na Amazon", "link": "achadinhos/prateleira-canto-vidro-box/"}
+        {
+          "rotulo": "🛒 Comprar na Shopee",
+          "link": "https://s.shopee.com.br/4qFzdAekk9"
+        },
+        {
+          "rotulo": "Também tem na Amazon",
+          "link": "achadinhos/prateleira-canto-vidro-box/"
+        }
       ]
     }
   ]

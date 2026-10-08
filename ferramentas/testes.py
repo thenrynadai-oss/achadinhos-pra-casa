@@ -229,6 +229,12 @@ def telegram_escapa_html_e_usa_enderecos_publicos():
 
 
 @teste
+def telegram_respeita_o_limite_de_20_por_minuto():
+    # leva grande vencendo de uma vez: a pausa entre posts mantém abaixo de 20 por minuto
+    assert 60 / tg.PAUSA_ENTRE_POSTS < 20
+
+
+@teste
 def telegram_poe_um_botao_por_linha():
     post = post_tg("x", "10:00", botoes=[{"rotulo": "Comprar na Shopee", "link": "https://s.shopee.com.br/abc"},
                                          {"rotulo": "Também na Amazon", "link": "achadinhos/x/"}])

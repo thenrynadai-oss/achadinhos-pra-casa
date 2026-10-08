@@ -26,6 +26,7 @@ import json
 import os
 import pathlib
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -40,6 +41,9 @@ REGISTRO = RAIZ / "conteudo" / "publicados" / "telegram.json"
 # execuções foi de 5h05. Com 8 horas, um post das 18:00 sai no máximo até as 02:00.
 JANELA = timedelta(hours=8)
 LIMITE_LEGENDA = 1024  # limite do Telegram para legenda de foto
+# O Telegram recusa (erro 429) mais de ~20 mensagens por minuto no mesmo canal. Com uma leva
+# grande vencendo de uma vez (08/10: 23 achadinhos "tudo hoje"), o robô espera entre um post e outro.
+PAUSA_ENTRE_POSTS = 3.5
 
 
 def escolher(posts: list, publicados: dict, agora: datetime, janela: timedelta = JANELA):
@@ -152,11 +156,13 @@ def main(argv: list[str]) -> int:
         return 0
 
     falhas = 0
-    for p in publicar:
+    for i, p in enumerate(publicar):
         metodo, campos = montar_envio(p, base, canal or "@canal-de-ensaio")
         if ensaio:
             print(f"  [ensaio] {metodo} {p.id} marcado para {tempo.texto_local(p.momento)}")
             continue
+        if i:
+            time.sleep(PAUSA_ENTRE_POSTS)
         resposta = chamar_api(token, metodo, campos)
         if resposta.get("ok"):
             registro[p.id] = {"publicado_em": tempo.utc_iso(tempo.agora()),

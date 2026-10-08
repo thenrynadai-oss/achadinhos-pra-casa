@@ -75,8 +75,13 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
     19:30, saíram às 20:54 e às 22:10.
   - Por isso, desde 28/09 os posts ficam na fila às **18:00** e a tolerância é de **8 horas**.
     Post que passar disso é marcado como perdido, e não sai de madrugada.
-  - Desde 08/10 são **dois achadinhos por dia, às 12:00 e às 19:00**, no formato novo (campo
-    `botoes`, um botão por linha). Os lotes antigos com `botao` continuam valendo.
+  - Desde 08/10 o formato é o novo (campo `botoes`, um botão por linha); os lotes antigos com
+    `botao` continuam valendo.
+  - **Ritmo (08/10, à tarde):** o Henrique quer tudo no ar no mesmo dia, sem agendamento. Lote
+    aprovado vai com a data e a hora da aprovação, e o robô é disparado na hora
+    (`gh workflow run telegram.yml`), sem esperar o agendamento do GitHub. O robô espera
+    `PAUSA_ENTRE_POSTS` (3,5 s) entre um post e outro, porque o Telegram recusa mais de ~20 por
+    minuto no mesmo canal.
   - Horário exato só com um disparador externo. Fica para quando o canal tiver audiência.
 - **Produtos:** ficam em `conteudo/produtos.json`.
   - **Escolha:** nota de pelo menos 4,7, mil vendidos ou mais, e resolver o problema de uma
@@ -155,6 +160,11 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - `fotos_produtos.py` agora amplia foto pequena (há loja que sobe 345 px);
   - o painel da Shopee bloqueia com "verificação de tráfego" depois de umas 60 consultas rápidas;
     uma a cada 15 s passa.
+  - **CSV da semana 5 enviado** (`saida/pinterest-lote-2026-10-24.csv`, 16 Pins de 24 a 30/10), no
+    Chrome dele, conta Achadinhos pra Casa, depois de conferir no ar as 16 imagens e as 16 páginas.
+    O Pinterest respondeu "Upload concluído"; conferir os agendados depois de ~2 horas.
+  - À tarde, a pedido dele ("suba tudo hoje sem agendamento"), os 23 achadinhos do Telegram foram
+    para 08/10 14:00 e saíram de uma vez; as repetições de 20 a 23/10 foram descartadas.
   - O cabeçalho do site estourava no celular (520 px numa tela de 375): no celular o menu
     passou para a segunda linha.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
