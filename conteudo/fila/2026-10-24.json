@@ -1,0 +1,135 @@
+{
+  "semana": "2026-10-24",
+  "nota": "Semana 5 do Pinterest: 14 achadinhos novos (Shopee, e Amazon onde há equivalente), dois por dia às 12:15 e 20:30, mais 2 Pins de convite para o canal do Telegram às 16:30 (24 e 28/10). Todo Pin leva à página do produto ou à /telegram/ do site, nunca direto à loja. Horários de Brasília.",
+  "aprovado_em": "2026-10-08",
+  "posts": [
+    {
+      "id": "s5-pin-porta-ovos-rolante-4-andares",
+      "canal": "pinterest",
+      "data": "2026-10-24",
+      "hora": "12:15",
+      "pin": "achadinho-porta-ovos-rolante-4-andares",
+      "link": "achadinhos/porta-ovos-rolante-4-andares/"
+    },
+    {
+      "id": "s5-pin-saco-organizador-cobertor",
+      "canal": "pinterest",
+      "data": "2026-10-24",
+      "hora": "20:30",
+      "pin": "achadinho-saco-organizador-cobertor",
+      "link": "achadinhos/saco-organizador-cobertor/"
+    },
+    {
+      "id": "s5-pin-colmeia-organizadora-gavetas",
+      "canal": "pinterest",
+      "data": "2026-10-25",
+      "hora": "12:15",
+      "pin": "achadinho-colmeia-organizadora-gavetas",
+      "link": "achadinhos/colmeia-organizadora-gavetas/"
+    },
+    {
+      "id": "s5-pin-carrinho-organizador-4-camadas",
+      "canal": "pinterest",
+      "data": "2026-10-25",
+      "hora": "20:30",
+      "pin": "achadinho-carrinho-organizador-4-camadas",
+      "link": "achadinhos/carrinho-organizador-4-camadas/"
+    },
+    {
+      "id": "s5-pin-lixeira-automatica-sensor",
+      "canal": "pinterest",
+      "data": "2026-10-26",
+      "hora": "12:15",
+      "pin": "achadinho-lixeira-automatica-sensor",
+      "link": "achadinhos/lixeira-automatica-sensor/"
+    },
+    {
+      "id": "s5-pin-porta-esponja-inox-pia",
+      "canal": "pinterest",
+      "data": "2026-10-26",
+      "hora": "20:30",
+      "pin": "achadinho-porta-esponja-inox-pia",
+      "link": "achadinhos/porta-esponja-inox-pia/"
+    },
+    {
+      "id": "s5-pin-mop-spray-reservatorio",
+      "canal": "pinterest",
+      "data": "2026-10-27",
+      "hora": "12:15",
+      "pin": "achadinho-mop-spray-reservatorio",
+      "link": "achadinhos/mop-spray-reservatorio/"
+    },
+    {
+      "id": "s5-pin-varal-de-prendedores",
+      "canal": "pinterest",
+      "data": "2026-10-27",
+      "hora": "20:30",
+      "pin": "achadinho-varal-de-prendedores",
+      "link": "achadinhos/varal-de-prendedores/"
+    },
+    {
+      "id": "s5-pin-escorredor-loucas-bambu",
+      "canal": "pinterest",
+      "data": "2026-10-28",
+      "hora": "12:15",
+      "pin": "achadinho-escorredor-loucas-bambu",
+      "link": "achadinhos/escorredor-loucas-bambu/"
+    },
+    {
+      "id": "s5-pin-porta-escovas-adesivo",
+      "canal": "pinterest",
+      "data": "2026-10-28",
+      "hora": "20:30",
+      "pin": "achadinho-porta-escovas-adesivo",
+      "link": "achadinhos/porta-escovas-adesivo/"
+    },
+    {
+      "id": "s5-pin-clips-organizador-fios",
+      "canal": "pinterest",
+      "data": "2026-10-29",
+      "hora": "12:15",
+      "pin": "achadinho-clips-organizador-fios",
+      "link": "achadinhos/clips-organizador-fios/"
+    },
+    {
+      "id": "s5-pin-porta-frios-duplex",
+      "canal": "pinterest",
+      "data": "2026-10-29",
+      "hora": "20:30",
+      "pin": "achadinho-porta-frios-duplex",
+      "link": "achadinhos/porta-frios-duplex/"
+    },
+    {
+      "id": "s5-pin-suporte-tampa-panela",
+      "canal": "pinterest",
+      "data": "2026-10-30",
+      "hora": "12:15",
+      "pin": "achadinho-suporte-tampa-panela",
+      "link": "achadinhos/suporte-tampa-panela/"
+    },
+    {
+      "id": "s5-pin-tabua-corte-inox",
+      "canal": "pinterest",
+      "data": "2026-10-30",
+      "hora": "20:30",
+      "pin": "achadinho-tabua-corte-inox",
+      "link": "achadinhos/tabua-corte-inox/"
+    },
+    {
+      "id": "s5-pin-convite-telegram",
+      "canal": "pinterest",
+      "data": "2026-10-24",
+      "hora": "16:30",
+      "pin": "convite-telegram",
+      "link": "telegram/"
+    },
+    {
+      "id": "s5-pin-convite-telegram-2",
+      "canal": "pinterest",
+      "data": "2026-10-28",
+      "hora": "16:30",
+      "pin": "convite-telegram-2",
+      "link": "telegram/"
+    }
+  ]
+}

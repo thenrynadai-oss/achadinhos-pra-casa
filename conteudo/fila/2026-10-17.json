@@ -1,6 +1,6 @@
 {
   "semana": "2026-10-17",
-  "nota": "Semana 4: 7 dicas novas às 12:15 e, às 20:30, um Pin novo (arte e texto diferentes) para cada um dos 7 achadinhos da semana 3, ligado à dica nova quando combina. Pin novo apontando para a mesma página é o que o Pinterest recomenda para dar mais alcance a um produto. Produtos novos ficam para a semana 5, quando a busca e os links puderem sair pelo painel ou pela API de afiliados da Shopee. No Telegram, a dica do dia às 18:00. Horários de Brasília.",
+  "nota": "Semana 4: 7 dicas novas às 12:15 e, às 20:30, um Pin novo (arte e texto diferentes) para cada um dos 7 achadinhos da semana 3, ligado à dica nova quando combina. Pin novo apontando para a mesma página é o que o Pinterest recomenda para dar mais alcance a um produto. Produtos novos ficam para a semana 5, quando a busca e os links puderem sair pelo painel ou pela API de afiliados da Shopee. No Telegram, a dica do dia às 18:00. Horários de Brasília. Em 08/10 as dicas do Telegram saíram daqui: de 12 a 23/10 o canal é só achadinho (lote 2026-10-12).",
   "aprovado_em": "2026-10-06",
   "posts": [
     {
@@ -114,90 +114,6 @@
       "hora": "20:30",
       "pin": "achadinho-porta-temperos-giratorio-2",
       "link": "achadinhos/porta-temperos-giratorio/"
-    },
-    {
-      "id": "s4-tg-inverno",
-      "canal": "telegram",
-      "data": "2026-10-17",
-      "hora": "18:00",
-      "imagem": "img/pins/guardar-roupas-de-inverno.jpg",
-      "texto": "O frio foi embora? Hora de guardar o inverno do jeito certo.\n\nLave tudo antes, porque mancha e suor atraem traça. Só guarde seco por completo. E malha vai dobrada, nunca no cabide, ou estica o ombro.\n\nOs 6 passos estão no link.",
-      "botao": {
-        "rotulo": "Ver os 6 passos",
-        "link": "dicas/guardar-roupas-de-inverno/"
-      }
-    },
-    {
-      "id": "s4-tg-compras",
-      "canal": "telegram",
-      "data": "2026-10-18",
-      "hora": "18:00",
-      "imagem": "img/pins/guardar-compras-do-mes.jpg",
-      "texto": "Chegou do mercado? A ordem de guardar muda tudo.\n\nPrimeiro o que é gelado. Depois, o que é novo vai para trás e o que você já tinha vem para a frente, e assim o que vence antes sai antes.\n\nOs 5 passos estão no link.",
-      "botao": {
-        "rotulo": "Ver os 5 passos",
-        "link": "dicas/guardar-compras-do-mes/"
-      }
-    },
-    {
-      "id": "s4-tg-frutas",
-      "canal": "telegram",
-      "data": "2026-10-19",
-      "hora": "18:00",
-      "imagem": "img/pins/frutas-e-verduras-duram-mais.jpg",
-      "texto": "Sabia que a maçã faz as outras frutas estragarem mais rápido?\n\nEla solta um gás que acelera o amadurecimento de tudo o que está perto. Deixe a maçã separada, e a batata longe da cebola, que juntas fazem a batata brotar.\n\nOs 6 truques estão no link.",
-      "botao": {
-        "rotulo": "Ver os 6 truques",
-        "link": "dicas/frutas-e-verduras-duram-mais/"
-      }
-    },
-    {
-      "id": "s4-tg-remedios",
-      "canal": "telegram",
-      "data": "2026-10-20",
-      "hora": "18:00",
-      "imagem": "img/pins/remedios-organizados-5-passos.jpg",
-      "texto": "Remédio no armário do banheiro é o lugar mais comum, e o pior.\n\nO vapor do banho e o calor estragam o remédio antes da validade. Prefira um armário fresco e seco, numa caixa com divisórias por uso.\n\nOs 5 passos estão no link.",
-      "botao": {
-        "rotulo": "Ver os 5 passos",
-        "link": "dicas/remedios-organizados-5-passos/"
-      }
-    },
-    {
-      "id": "s4-tg-cabos",
-      "canal": "telegram",
-      "data": "2026-10-21",
-      "hora": "18:00",
-      "imagem": "img/pins/cabos-e-carregadores-5-ideias.jpg",
-      "texto": "Aquela gaveta de fios embolados tem solução, e é barata.\n\nCada cabo enrolado com um velcro ou elástico, e um pedaço de fita crepe na ponta dizendo de que aparelho ele é. Cabo que não serve em nada da casa vai para o descarte de eletrônicos.\n\nAs 5 ideias estão no link.",
-      "botao": {
-        "rotulo": "Ver as 5 ideias",
-        "link": "dicas/cabos-e-carregadores-5-ideias/"
-      }
-    },
-    {
-      "id": "s4-tg-sala",
-      "canal": "telegram",
-      "data": "2026-10-22",
-      "hora": "18:00",
-      "imagem": "img/pins/sala-pequena-6-ideias.jpg",
-      "texto": "Sala pequena parece maior com dois truques simples.\n\nUm espelho grande na parede em frente à janela espalha a luz. E a cortina clara instalada perto do teto faz o pé-direito parecer mais alto.\n\nAs 6 ideias estão no link.",
-      "botao": {
-        "rotulo": "Ver as 6 ideias",
-        "link": "dicas/sala-pequena-6-ideias/"
-      }
-    },
-    {
-      "id": "s4-tg-varanda",
-      "canal": "telegram",
-      "data": "2026-10-23",
-      "hora": "18:00",
-      "imagem": "img/pins/varanda-pequena-5-ideias.jpg",
-      "texto": "Varanda pequena dá um ótimo cantinho de café.\n\nAs plantas sobem para o guarda-corpo e para a parede, e a mesa de parede que rebate abre na hora do café e some depois.\n\nAs 5 ideias estão no link.",
-      "botao": {
-        "rotulo": "Ver as 5 ideias",
-        "link": "dicas/varanda-pequena-5-ideias/"
-      }
     }
   ]
 }

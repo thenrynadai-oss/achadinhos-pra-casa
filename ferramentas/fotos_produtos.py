@@ -30,7 +30,10 @@ def baixar(imagem: str) -> Image.Image:
 
 
 def quadrada(foto: Image.Image) -> Image.Image:
-    foto.thumbnail((LADO, LADO))
+    # thumbnail só reduz: foto de loja com 350 px (há vendedor que sobe assim) ficava miúda no meio
+    # do quadro. Escala para o lado do quadro nos dois sentidos.
+    escala = LADO / max(foto.size)
+    foto = foto.resize((round(foto.width * escala), round(foto.height * escala)), Image.LANCZOS)
     fundo = Image.new("RGB", (LADO, LADO), "white")
     fundo.paste(foto, ((LADO - foto.width) // 2, (LADO - foto.height) // 2))
     return fundo

@@ -52,12 +52,15 @@ def preencher(pin: dict) -> str:
     campos.setdefault("numero", "")
     if pin.get("foto"):
         campos["foto_url"] = foto_url(pin["foto"])
-    if pin.get("foto_produto"):
-        # a cópia que o site já guarda (ferramentas/fotos_produtos.py), não a da loja
-        foto = RAIZ / "site" / pin["foto_produto"]
+    # foto_produto (uma) ou fotos_produtos (vitrine do convite do Telegram, foto1..fotoN): sempre a
+    # cópia que o site já guarda (ferramentas/fotos_produtos.py), não a da loja
+    fotos = ([("foto_produto", pin["foto_produto"])] if pin.get("foto_produto") else []) + \
+            [(f"foto{i}", f) for i, f in enumerate(pin.get("fotos_produtos", []), start=1)]
+    for campo, caminho in fotos:
+        foto = RAIZ / "site" / caminho
         if not foto.exists():
-            sys.exit(f"{pin['id']}: falta {pin['foto_produto']}; rode ferramentas/fotos_produtos.py")
-        campos["foto_produto"] = foto.as_uri()
+            sys.exit(f"{pin['id']}: falta {caminho}; rode ferramentas/fotos_produtos.py")
+        campos[campo] = foto.as_uri()
     # substitute (e não safe_substitute): campo faltando no JSON quebra aqui, não vira Pin com buraco
     return modelo.substitute(campos)
 

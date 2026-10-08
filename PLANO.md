@@ -143,6 +143,18 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
     todo dia no Telegram" em todas as páginas do site, página `/telegram/` (destino dos Pins de
     convite) e "manda pra quem precisa" no fim de cada post. Não divulgar em grupo dos outros.
   - Para produto novo falta o painel de afiliados da Shopee logado no navegador do Claude.
+- 2026-10-08: **16 achadinhos novos, aprovados pelo Henrique** (o site vai a 23 produtos):
+  - escolhidos pela busca do painel de afiliados (nota a partir de 4,7, mais de mil vendidos, nicho
+    casa); 32 links gerados no "Link personalizado" (Sub_id `site` e `telegram`) e conferidos pelo
+    redirecionamento, 32/32;
+  - Amazon em 11 dos 16, sempre um modelo equivalente com nota a partir de 4,2;
+  - Telegram de 12 a 23/10 (`conteudo/fila/2026-10-12.json`): os 16 novos e, de 20 a 23/10, os 7
+    primeiros com chamada nova; as dicas da semana 4 saíram do Telegram;
+  - Pinterest semana 5 (`conteudo/fila/2026-10-24.json`): 14 achadinhos e 2 Pins de convite para o
+    canal (modelo `pins/modelos/telegram.html`, link para `/telegram/`);
+  - `fotos_produtos.py` agora amplia foto pequena (há loja que sobe 345 px);
+  - o painel da Shopee bloqueia com "verificação de tráfego" depois de umas 60 consultas rápidas;
+    uma a cada 15 s passa.
   - O cabeçalho do site estourava no celular (520 px numa tela de 375): no celular o menu
     passou para a segunda linha.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
