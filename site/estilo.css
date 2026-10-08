@@ -131,6 +131,27 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--terracota); out
   .achadinho img { width: 100%; max-width: 240px; }
 }
 
+/* convite para o canal do Telegram: faixa antes do rodapé e página /telegram/ */
+.convite-telegram { background: var(--papel); border-top: 1px solid var(--linha); padding: 26px 0; }
+.convite-linha { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.convite-texto { flex: 1 1 260px; min-width: 0; }
+.convite-texto b { display: block; font-size: 19px; line-height: 1.3; }
+.convite-texto span { display: block; color: var(--suave); font-size: 16px; margin-top: 2px; }
+.icone-tg { flex: none; }
+.botao-tg { background: #2aa1da; margin-top: 0; }
+.botao-tg:hover { background: #1d86b9; }
+.capa-tg { max-width: 62ch; padding-block: 40px 12px; }
+.capa-tg h1 {
+  font-family: 'Fraunces', serif; font-weight: 800; font-variation-settings: 'SOFT' 100;
+  font-size: clamp(34px, 6vw, 52px); line-height: 1.06; letter-spacing: -.012em; margin: 18px 0 0;
+}
+.capa-tg > p:not(.meta) { font-size: clamp(18px, 2.4vw, 21px); color: var(--suave); margin: 14px 0 0; }
+.capa-tg .botao-tg { margin-top: 24px; }
+.capa-tg .meta { margin-top: 18px; }
+@media (max-width: 520px) {
+  .convite-linha .botao-tg { width: 100%; justify-content: center; }
+}
+
 /* páginas de texto */
 .texto { max-width: 68ch; padding-block: 32px 56px; }
 .texto h1 { font-family: 'Fraunces', serif; font-weight: 800; font-variation-settings: 'SOFT' 100; font-size: clamp(32px, 5vw, 44px); line-height: 1.1; margin: 0 0 16px; }
@@ -142,7 +163,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--terracota); out
 .rodape a { color: var(--suave); }
 
 @media (max-width: 520px) {
-  .menu { gap: 12px; font-size: 15px; }
+  /* marca e menu não cabem numa linha de 375px: o menu desce e se espalha */
+  .topo-linha { flex-wrap: wrap; row-gap: 0; padding-block: 8px 4px; min-height: 0; }
+  .menu { width: 100%; justify-content: space-between; gap: 8px; font-size: 15px; }
   .marca span { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {

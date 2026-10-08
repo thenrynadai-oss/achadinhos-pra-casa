@@ -229,13 +229,39 @@ def telegram_escapa_html_e_usa_enderecos_publicos():
 
 
 @teste
-def post_com_link_de_loja_avisa_que_e_afiliado():
-    # vale para a fila de verdade: todo post do Telegram com botão para loja traz o aviso
-    loja = re.compile(r"https?://([a-z0-9-]+\.)*(shopee\.com\.br|mercadolivre\.com\.br|amazon\.com\.br)/")
+def telegram_poe_um_botao_por_linha():
+    post = post_tg("x", "10:00", botoes=[{"rotulo": "Comprar na Shopee", "link": "https://s.shopee.com.br/abc"},
+                                         {"rotulo": "Também na Amazon", "link": "achadinhos/x/"}])
+    _, campos = tg.montar_envio(post, "https://exemplo.github.io/site", "@canal")
+    teclado = json.loads(campos["reply_markup"])["inline_keyboard"]
+    assert [[b["url"] for b in linha] for linha in teclado] == [["https://s.shopee.com.br/abc"],
+                                                                 ["https://exemplo.github.io/site/achadinhos/x/"]]
+
+
+LOJA = re.compile(r"https?://([a-z0-9-]+\.)*(shopee\.com\.br|mercadolivre\.com\.br|amazon\.com\.br|amzn\.to)/")
+
+
+def links_do_post(p) -> list[str]:
+    return [b["link"] for b in tg.botoes_do_post(p.dados)] + re.findall(r"https?://\S+", p.dados["texto"])
+
+
+@teste
+def post_com_link_de_loja_avisa_que_e_publicidade():
+    # vale para a fila de verdade: post do Telegram com link de loja diz que é anúncio.
+    # "#publi" é a marca curta que o CONAR aceita; os lotes antigos usam "Link de afiliado".
     sem_aviso = [p.id for p in fila.carregar() if p.canal == "telegram"
-                 and loja.match((p.dados.get("botao") or {}).get("link", ""))
-                 and "Link de afiliado" not in p.dados["texto"]]
+                 and any(LOJA.match(l) for l in links_do_post(p))
+                 and not re.search(r"#publi|link de afiliado", p.dados["texto"], re.IGNORECASE)]
     assert not sem_aviso, sem_aviso
+
+
+@teste
+def telegram_nunca_leva_link_da_amazon():
+    # Central de Associados: link de Associado não vai em app de mensagem. No Telegram, quem
+    # quer a Amazon vai para a página do produto no site, onde fica o "Ver na Amazon".
+    com_amazon = [p.id for p in fila.carregar() if p.canal == "telegram"
+                  and any(re.search(r"amazon\.com\.br|amzn\.to|tag=achadinhoshen", l) for l in links_do_post(p))]
+    assert not com_amazon, com_amazon
 
 
 def main():

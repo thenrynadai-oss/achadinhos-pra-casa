@@ -9,7 +9,8 @@ Cada arquivo é um lote semanal:
         {"id": "...", "canal": "pinterest", "data": "2026-09-29", "hora": "09:15",
          "pin": "<id em conteudo/pins.json>", "link": "dicas/slug/"},
         {"id": "...", "canal": "telegram", "data": "2026-09-29", "hora": "19:30",
-         "imagem": "img/pins/x.jpg", "texto": "...", "botao": {"rotulo": "...", "link": "..."}}
+         "imagem": "img/produtos/x.jpg", "texto": "...",
+         "botoes": [{"rotulo": "...", "link": "..."}]}      <- ou "botao": {...}, nos lotes antigos
       ]
     }
 
@@ -67,6 +68,9 @@ def validar_post(p: dict, pins: dict) -> list[str]:
     if p.get("canal") in ("telegram", "facebook"):
         if not p.get("texto"):
             erros.append(f"{pid}: post sem texto")
+        botoes = p.get("botoes") or ([p["botao"]] if p.get("botao") else [])
+        if any(not (b.get("rotulo") and b.get("link")) for b in botoes):
+            erros.append(f"{pid}: botão sem rótulo ou sem link")
     imagem = p.get("imagem")
     if imagem and not (RAIZ / "site" / imagem).exists():
         erros.append(f"{pid}: imagem '{imagem}' não existe em site/")

@@ -24,6 +24,8 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
 | **Nada de automação clicando no navegador** | O Pinterest pega extensão que imita clique humano e suspende a conta. A conta antiga travou no 14º Pin. Só canal oficial. |
 | **Link para o nosso site, não marcação Shopee dentro do Pin** | A marcação só existe clicando na tela, e o Pinterest trata encurtador (s.shopee) como spam. O site também hospeda as imagens, e tanto o CSV quanto a API precisam de imagem em endereço público. |
 | Facebook e Telegram com link de afiliado direto | Aí link encurtado não é problema. A faixa de produto da Shopee no Facebook é opcional; a comissão vem do link. |
+| Post do Telegram = foto do produto + 1 ou 2 linhas + link da Shopee + `#publi` | Pedido do Henrique em 08/10: "a explicação já tá na página da compra, a gente só tem que vender o peixe". O `#publi` fica porque o CONAR pede anúncio identificado. |
+| Amazon nunca vai direto no Telegram | A Central de Associados proíbe link de Associado em app de mensagem. O botão "Também tem na Amazon" leva à página do produto no site. Um teste trava post do Telegram com link da Amazon. |
 | Shopee primeiro; Mercado Livre depois; Amazon só com tráfego | A Amazon fecha a conta sem 3 vendas em 180 dias. |
 | Nicho: organização e cozinha | O público do Pinterest procura ideia para a casa; item de casa barato vende por impulso. |
 | Primeira semana só com Pins de dica, sem produto | Aquecer a conta enquanto a Shopee aprova o cadastro. |
@@ -73,6 +75,8 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
     19:30, saíram às 20:54 e às 22:10.
   - Por isso, desde 28/09 os posts ficam na fila às **18:00** e a tolerância é de **8 horas**.
     Post que passar disso é marcado como perdido, e não sai de madrugada.
+  - Desde 08/10 são **dois achadinhos por dia, às 12:00 e às 19:00**, no formato novo (campo
+    `botoes`, um botão por linha). Os lotes antigos com `botao` continuam valendo.
   - Horário exato só com um disparador externo. Fica para quando o canal tiver audiência.
 - **Produtos:** ficam em `conteudo/produtos.json`.
   - **Escolha:** nota de pelo menos 4,7, mil vendidos ou mais, e resolver o problema de uma
@@ -129,6 +133,18 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - cada produto está ligado a uma dica (campo `dica`), e a dica mostra o bloco "Achadinho que
     ajuda nessa dica".
 - 2026-10-06: **CSV da semana 3 enviado** (`saida/pinterest-lote-2026-10-10.csv`, 14 Pins de 10/10 a 16/10, conta Achadinhos pra Casa). O Pinterest respondeu "Upload concluído" e cria os Pins em cerca de 2 horas; conferir os agendados. A semana 2 nunca foi enviada (as datas de 03 a 09/10 passaram).
+- 2026-10-06: **Amazon entra nos achadinhos** (commit `845c42e`): 6 dos 7 produtos com "Ver na Amazon" (tag `achadinhoshen-20`) e o aviso do Contrato de Associados. Meta: 3 vendas qualificadas antes de ~04/12. Foto e preço da Amazon não entram (contrato). **Semana 4 aprovada e CSV enviado** (14 Pins, 17 a 23/10).
+- 2026-10-08: **Telegram no formato novo, aprovado pelo Henrique** (`conteudo/fila/2026-10-08.json`):
+  os 7 achadinhos, dois por dia (12:00 e 19:00), de 08/10 a 11/10, com foto, frase curta, link
+  da Shopee (Sub_id `telegram`) e `#publi`. Saíram da fila os 7 posts `s3-tg-*` da semana 3 e as
+  2 dicas da semana 2 que ainda iam sair (08 e 09/10), para o canal ficar só com achadinho. As
+  dicas do Telegram de 17 a 23/10 (semana 4) vão virar produto quando houver links novos.
+  - O canal tinha **2 inscritos** (o Henrique e o bot). Divulgação grátis: faixa "Achadinhos
+    todo dia no Telegram" em todas as páginas do site, página `/telegram/` (destino dos Pins de
+    convite) e "manda pra quem precisa" no fim de cada post. Não divulgar em grupo dos outros.
+  - Para produto novo falta o painel de afiliados da Shopee logado no navegador do Claude.
+  - O cabeçalho do site estourava no celular (520 px numa tela de 375): no celular o menu
+    passou para a segunda linha.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
   primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
   pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.

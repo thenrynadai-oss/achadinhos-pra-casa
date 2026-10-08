@@ -58,6 +58,11 @@ def url_publica(base: str, caminho: str) -> str:
     return caminho if caminho.startswith("http") else f"{base.rstrip('/')}/{caminho.lstrip('/')}"
 
 
+def botoes_do_post(d: dict) -> list[dict]:
+    """Aceita "botoes" (lista) ou o "botao" único dos lotes antigos."""
+    return d.get("botoes") or ([d["botao"]] if d.get("botao") else [])
+
+
 def montar_envio(post, base: str, canal: str) -> tuple[str, dict]:
     """Devolve o método da API e os campos. A legenda é HTML escapado."""
     d = post.dados
@@ -65,8 +70,10 @@ def montar_envio(post, base: str, canal: str) -> tuple[str, dict]:
     if len(texto) > LIMITE_LEGENDA:
         raise ValueError(f"{post.id}: texto com {len(texto)} caracteres; a legenda do Telegram aceita {LIMITE_LEGENDA}")
     campos = {"chat_id": canal, "parse_mode": "HTML"}
-    if d.get("botao"):
-        teclado = {"inline_keyboard": [[{"text": d["botao"]["rotulo"], "url": url_publica(base, d["botao"]["link"])}]]}
+    botoes = botoes_do_post(d)
+    if botoes:
+        # um botão por linha: no celular, botão lado a lado corta o rótulo
+        teclado = {"inline_keyboard": [[{"text": b["rotulo"], "url": url_publica(base, b["link"])}] for b in botoes]}
         campos["reply_markup"] = json.dumps(teclado, ensure_ascii=False)
     if d.get("imagem"):
         campos.update(photo=url_publica(base, d["imagem"]), caption=texto)

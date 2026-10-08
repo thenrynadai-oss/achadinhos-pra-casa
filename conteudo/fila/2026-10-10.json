@@ -1,43 +1,119 @@
 {
   "semana": "2026-10-10",
-  "nota": "Semana 3: a primeira com produto (opção A). 7 dicas às 12:15 e 7 achadinhos da Shopee às 20:30, cada produto ligado a uma dica que já está no site. O Pin do produto leva à página dele no site, com o link de afiliado e o aviso. No Telegram, o achadinho do dia às 18:00, com o link de afiliado marcado como 'telegram'. Horários de Brasília.",
+  "nota": "Semana 3: a primeira com produto (opção A). 7 dicas às 12:15 e 7 achadinhos da Shopee às 20:30, cada produto ligado a uma dica que já está no site. O Pin do produto leva à página dele no site, com o link de afiliado e o aviso. No Telegram, o achadinho do dia às 18:00, com o link de afiliado marcado como 'telegram'. Horários de Brasília. Em 08/10 os 7 posts do Telegram (s3-tg-*) saíram daqui e foram para o lote 2026-10-08, no formato novo.",
   "aprovado_em": "2026-09-28",
   "posts": [
-    {"id": "s3-pin-destralhe", "canal": "pinterest", "data": "2026-10-10", "hora": "12:15", "pin": "destralhe-30-dias", "link": "dicas/destralhe-30-dias/"},
-    {"id": "s3-pin-temperos", "canal": "pinterest", "data": "2026-10-10", "hora": "20:30", "pin": "achadinho-porta-temperos-giratorio", "link": "achadinhos/porta-temperos-giratorio/"},
-    {"id": "s3-pin-quarto", "canal": "pinterest", "data": "2026-10-11", "hora": "12:15", "pin": "quarto-pequeno-6-ideias", "link": "dicas/quarto-pequeno-6-ideias/"},
-    {"id": "s3-pin-potes", "canal": "pinterest", "data": "2026-10-11", "hora": "20:30", "pin": "achadinho-potes-hermeticos-quadrados", "link": "achadinhos/potes-hermeticos-quadrados/"},
-    {"id": "s3-pin-pia-banheiro", "canal": "pinterest", "data": "2026-10-12", "hora": "12:15", "pin": "pia-do-banheiro-5-ideias", "link": "dicas/pia-do-banheiro-5-ideias/"},
-    {"id": "s3-pin-geladeira", "canal": "pinterest", "data": "2026-10-12", "hora": "20:30", "pin": "achadinho-organizador-geladeira-acrilico", "link": "achadinhos/organizador-geladeira-acrilico/"},
-    {"id": "s3-pin-bolsas", "canal": "pinterest", "data": "2026-10-13", "hora": "12:15", "pin": "bolsas-organizadas-5-ideias", "link": "dicas/bolsas-organizadas-5-ideias/"},
-    {"id": "s3-pin-talheres", "canal": "pinterest", "data": "2026-10-13", "hora": "20:30", "pin": "achadinho-porta-talheres-bambu-extensivel", "link": "achadinhos/porta-talheres-bambu-extensivel/"},
-    {"id": "s3-pin-toalhas", "canal": "pinterest", "data": "2026-10-14", "hora": "12:15", "pin": "toalhas-dobradas-3-jeitos", "link": "dicas/toalhas-dobradas-3-jeitos/"},
-    {"id": "s3-pin-cabides", "canal": "pinterest", "data": "2026-10-14", "hora": "20:30", "pin": "achadinho-cabides-veludo-slim", "link": "achadinhos/cabides-veludo-slim/"},
-    {"id": "s3-pin-maquiagem", "canal": "pinterest", "data": "2026-10-15", "hora": "12:15", "pin": "maquiagem-organizada-5-ideias", "link": "dicas/maquiagem-organizada-5-ideias/"},
-    {"id": "s3-pin-sapateira", "canal": "pinterest", "data": "2026-10-15", "hora": "20:30", "pin": "achadinho-sapateira-vertical-porta", "link": "achadinhos/sapateira-vertical-porta/"},
-    {"id": "s3-pin-cabeceira", "canal": "pinterest", "data": "2026-10-16", "hora": "12:15", "pin": "mesa-de-cabeceira-5-ideias", "link": "dicas/mesa-de-cabeceira-5-ideias/"},
-    {"id": "s3-pin-prateleira-box", "canal": "pinterest", "data": "2026-10-16", "hora": "20:30", "pin": "achadinho-prateleira-canto-vidro-box", "link": "achadinhos/prateleira-canto-vidro-box/"},
-
-    {"id": "s3-tg-temperos", "canal": "telegram", "data": "2026-10-10", "hora": "18:00", "imagem": "img/pins/achadinho-porta-temperos-giratorio.jpg",
-     "texto": "Achadinho do dia: porta-temperos giratório com 12 potes.\n\nOs potes ficam à vista numa base que gira, então você acha o orégano sem revirar o armário. É a primeira das nossas dicas de temperos, pronta: potes iguais e etiquetados.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/7ptbCgGCaE"}},
-    {"id": "s3-tg-potes", "canal": "telegram", "data": "2026-10-11", "hora": "18:00", "imagem": "img/pins/achadinho-potes-hermeticos-quadrados.jpg",
-     "texto": "Achadinho do dia: kit de potes herméticos quadrados.\n\nPote quadrado aproveita melhor a prateleira que o redondo, e o transparente mostra o que está acabando antes de acabar. O tamanho do kit você escolhe na loja.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/5LCGE5Pien"}},
-    {"id": "s3-tg-geladeira", "canal": "telegram", "data": "2026-10-12", "hora": "18:00", "imagem": "img/pins/achadinho-organizador-geladeira-acrilico.jpg",
-     "texto": "Achadinho do dia: pote de geladeira com tampa e escorredor, de 2,2 litros.\n\nFruta e verdura lavadas ficam no cesto, longe da água que junta no fundo, e você vê o que tem sem abrir a tampa.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/5VVgQOP5Jo"}},
-    {"id": "s3-tg-talheres", "canal": "telegram", "data": "2026-10-13", "hora": "18:00", "imagem": "img/pins/achadinho-porta-talheres-bambu-extensivel.jpg",
-     "texto": "Achadinho do dia: porta-talheres de bambu que estica.\n\nEle abre até a largura da gaveta, então nada escorrega para o lado, e as 7 divisórias separam talher, concha e utensílio.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/7faB0NGpvD"}},
-    {"id": "s3-tg-cabides", "canal": "telegram", "data": "2026-10-14", "hora": "18:00", "imagem": "img/pins/achadinho-cabides-veludo-slim.jpg",
-     "texto": "Achadinho do dia: kit com 50 cabides de veludo slim.\n\nFinos e antideslizantes: cabe mais roupa no mesmo cabideiro e nada escorrega do ombro. Trocar os cabides por modelos iguais é a primeira ideia do guarda-roupa pequeno.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/5q8Wp0Nodu"}},
-    {"id": "s3-tg-sapateira", "canal": "telegram", "data": "2026-10-15", "hora": "18:00", "imagem": "img/pins/achadinho-sapateira-vertical-porta.jpg",
-     "texto": "Achadinho do dia: sapateira de pendurar atrás da porta.\n\nOs sapatos saem do chão e vão para um espaço que ninguém usa. Vem com ganchos e tem versões de 16, 20 e 24 bolsos.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/4fwZQrfO56"}},
-    {"id": "s3-tg-prateleira-box", "canal": "telegram", "data": "2026-10-16", "hora": "18:00", "imagem": "img/pins/achadinho-prateleira-canto-vidro-box.jpg",
-     "texto": "Achadinho do dia: duas prateleiras de vidro de canto para o box.\n\nShampoo e sabonete saem do chão do banheiro e ficam no canto que sobra entre as paredes.\n\nLink de afiliado: a Shopee nos paga uma pequena comissão se você comprar, e o seu preço não muda.",
-     "botao": {"rotulo": "Ver na Shopee", "link": "https://s.shopee.com.br/4qFzdAekk9"}}
+    {
+      "id": "s3-pin-destralhe",
+      "canal": "pinterest",
+      "data": "2026-10-10",
+      "hora": "12:15",
+      "pin": "destralhe-30-dias",
+      "link": "dicas/destralhe-30-dias/"
+    },
+    {
+      "id": "s3-pin-temperos",
+      "canal": "pinterest",
+      "data": "2026-10-10",
+      "hora": "20:30",
+      "pin": "achadinho-porta-temperos-giratorio",
+      "link": "achadinhos/porta-temperos-giratorio/"
+    },
+    {
+      "id": "s3-pin-quarto",
+      "canal": "pinterest",
+      "data": "2026-10-11",
+      "hora": "12:15",
+      "pin": "quarto-pequeno-6-ideias",
+      "link": "dicas/quarto-pequeno-6-ideias/"
+    },
+    {
+      "id": "s3-pin-potes",
+      "canal": "pinterest",
+      "data": "2026-10-11",
+      "hora": "20:30",
+      "pin": "achadinho-potes-hermeticos-quadrados",
+      "link": "achadinhos/potes-hermeticos-quadrados/"
+    },
+    {
+      "id": "s3-pin-pia-banheiro",
+      "canal": "pinterest",
+      "data": "2026-10-12",
+      "hora": "12:15",
+      "pin": "pia-do-banheiro-5-ideias",
+      "link": "dicas/pia-do-banheiro-5-ideias/"
+    },
+    {
+      "id": "s3-pin-geladeira",
+      "canal": "pinterest",
+      "data": "2026-10-12",
+      "hora": "20:30",
+      "pin": "achadinho-organizador-geladeira-acrilico",
+      "link": "achadinhos/organizador-geladeira-acrilico/"
+    },
+    {
+      "id": "s3-pin-bolsas",
+      "canal": "pinterest",
+      "data": "2026-10-13",
+      "hora": "12:15",
+      "pin": "bolsas-organizadas-5-ideias",
+      "link": "dicas/bolsas-organizadas-5-ideias/"
+    },
+    {
+      "id": "s3-pin-talheres",
+      "canal": "pinterest",
+      "data": "2026-10-13",
+      "hora": "20:30",
+      "pin": "achadinho-porta-talheres-bambu-extensivel",
+      "link": "achadinhos/porta-talheres-bambu-extensivel/"
+    },
+    {
+      "id": "s3-pin-toalhas",
+      "canal": "pinterest",
+      "data": "2026-10-14",
+      "hora": "12:15",
+      "pin": "toalhas-dobradas-3-jeitos",
+      "link": "dicas/toalhas-dobradas-3-jeitos/"
+    },
+    {
+      "id": "s3-pin-cabides",
+      "canal": "pinterest",
+      "data": "2026-10-14",
+      "hora": "20:30",
+      "pin": "achadinho-cabides-veludo-slim",
+      "link": "achadinhos/cabides-veludo-slim/"
+    },
+    {
+      "id": "s3-pin-maquiagem",
+      "canal": "pinterest",
+      "data": "2026-10-15",
+      "hora": "12:15",
+      "pin": "maquiagem-organizada-5-ideias",
+      "link": "dicas/maquiagem-organizada-5-ideias/"
+    },
+    {
+      "id": "s3-pin-sapateira",
+      "canal": "pinterest",
+      "data": "2026-10-15",
+      "hora": "20:30",
+      "pin": "achadinho-sapateira-vertical-porta",
+      "link": "achadinhos/sapateira-vertical-porta/"
+    },
+    {
+      "id": "s3-pin-cabeceira",
+      "canal": "pinterest",
+      "data": "2026-10-16",
+      "hora": "12:15",
+      "pin": "mesa-de-cabeceira-5-ideias",
+      "link": "dicas/mesa-de-cabeceira-5-ideias/"
+    },
+    {
+      "id": "s3-pin-prateleira-box",
+      "canal": "pinterest",
+      "data": "2026-10-16",
+      "hora": "20:30",
+      "pin": "achadinho-prateleira-canto-vidro-box",
+      "link": "achadinhos/prateleira-canto-vidro-box/"
+    }
   ]
 }

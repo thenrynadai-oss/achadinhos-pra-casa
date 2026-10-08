@@ -45,6 +45,7 @@ class Gerador:
         self.produtos = carregar("produtos.json")
         self.base = string.Template((WEB / "base.html").read_text(encoding="utf-8"))
         self.url_base = self.cfg["base_url"].rstrip("/")
+        self.canal_telegram = self.cfg.get("telegram", "")
         datas = [d["publicada_em"] for d in self.dicas] + [p["adicionado_em"] for p in self.produtos]
         # o ano do rodapé sai do conteúdo, não do relógio da máquina
         self.ano = max(datas)[:4] if datas else "2026"
@@ -61,6 +62,9 @@ class Gerador:
         if self.cfg.get("pinterest_verificacao"):
             extras.append(f'<meta name="p:domain_verify" content="{e(self.cfg["pinterest_verificacao"])}">')
         menu_achadinhos = f'<a href="{raiz}#achadinhos">Achadinhos</a>' if self.produtos else ""
+        menu_telegram = f'<a href="{raiz}telegram/">Telegram</a>' if self.canal_telegram else ""
+        # a faixa aparece em toda página, menos na do próprio canal e no 404
+        convite = self.convite_telegram() if caminho not in ("telegram/", "404.html") else ""
         doc = self.base.substitute(
             titulo_pagina=e(titulo if caminho == "" else f"{titulo} · {self.cfg['nome']}"),
             titulo=e(titulo),
@@ -71,7 +75,9 @@ class Gerador:
             meta_extra="\n".join(extras),
             raiz=raiz,
             menu_achadinhos=menu_achadinhos,
+            menu_telegram=menu_telegram,
             conteudo=conteudo,
+            convite_telegram=convite,
             ano=self.ano,
         )
         destino = SITE / (caminho + "index.html" if caminho == "" or caminho.endswith("/") else caminho)
@@ -81,6 +87,23 @@ class Gerador:
             self.urls_sitemap.append((self.url(caminho), lastmod))
 
     # ---------- blocos ----------
+    ICONE_TELEGRAM = ('<svg class="icone-tg" width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">'
+                      '<circle cx="24" cy="24" r="24" fill="#2aa1da"/>'
+                      '<path d="M11 23.4 34.6 14c1.1-.4 2 .3 1.7 1.9l-4 18.9c-.3 1.3-1.1 1.7-2.2 1l-6-4.4-2.9 2.8'
+                      'c-.3.3-.6.6-1.2.6l.4-6.1 11.1-10c.5-.4-.1-.7-.7-.3l-13.7 8.6-5.9-1.8c-1.3-.4-1.3-1.3.3-1.8z" fill="#fff"/></svg>')
+
+    def link_telegram(self) -> str:
+        return f"https://t.me/{self.canal_telegram}"
+
+    def convite_telegram(self) -> str:
+        if not self.canal_telegram:
+            return ""
+        return (f'<section class="convite-telegram" aria-label="Canal no Telegram"><div class="largura convite-linha">'
+                f'{self.ICONE_TELEGRAM}<div class="convite-texto"><b>Achadinhos todo dia no Telegram</b>'
+                f'<span>Dois achados por dia, com foto e link. É grátis e você sai quando quiser.</span></div>'
+                f'<a class="botao botao-tg" href="{e(self.link_telegram())}" target="_blank" rel="noopener">Entrar no canal</a>'
+                f'</div></section>')
+
     def card_dica(self, d, raiz=""):
         return (
             f'<article class="card"><img src="{raiz}{e(d["imagem"])}" alt="" loading="lazy" width="1000" height="1500">'
@@ -205,6 +228,29 @@ class Gerador:
         )
         self.pagina("privacidade/", "Privacidade", "Como este site trata os seus dados.", privacidade)
 
+    def pagina_telegram(self):
+        """Página de entrada do canal: é para cá que aponta o Pin de convite (link do nosso domínio,
+        não t.me, para o Pinterest ver um site verificado)."""
+        if not self.canal_telegram:
+            return
+        raiz = "../"
+        vitrine = "".join(self.card_produto(p, raiz) for p in self.produtos[:4])
+        corpo = (
+            f'<div class="largura"><section class="capa-tg">{self.ICONE_TELEGRAM}'
+            f'<h1>Achadinhos pra Casa no Telegram</h1>'
+            f'<p>Todo dia, dois achadinhos pra casa e cozinha: a foto, o que ele resolve e o link da loja. '
+            f'Nada de textão, nada de corrente.</p>'
+            f'<a class="botao botao-tg" href="{e(self.link_telegram())}" target="_blank" rel="noopener">Entrar no canal</a>'
+            f'<p class="meta">É um canal: só a gente posta, ninguém vê o seu número e você sai quando quiser. '
+            f'Os links são de afiliado: a loja nos paga uma pequena comissão se você comprar, e o seu preço não muda.</p>'
+            f'</section>'
+            + (f'<section class="secao"><h2>O tipo de achadinho que aparece lá</h2><div class="grade">{vitrine}</div></section>'
+               if vitrine else "")
+            + '</div>'
+        )
+        self.pagina("telegram/", "No Telegram", "Dois achadinhos por dia pra casa e cozinha, com foto e link, no canal do Telegram.",
+                    corpo)
+
     def erro_404(self):
         # o 404 é servido em qualquer caminho, então os links dele são absolutos
         corpo = (f'<div class="largura texto"><h1>Página não encontrada</h1>'
@@ -246,6 +292,7 @@ class Gerador:
         for p in self.produtos:
             self.produto(p)
         self.textos()
+        self.pagina_telegram()
         self.erro_404()
         self.extras()
         print(f"site gerado: {len(self.urls_sitemap)} páginas ({len(self.dicas)} dicas, {len(self.produtos)} produtos)")
