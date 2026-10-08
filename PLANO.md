@@ -165,6 +165,10 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
     O Pinterest respondeu "Upload concluído"; conferir os agendados depois de ~2 horas.
   - À tarde, a pedido dele ("suba tudo hoje sem agendamento"), os 23 achadinhos do Telegram foram
     para 08/10 14:00 e saíram de uma vez; as repetições de 20 a 23/10 foram descartadas.
+  - **Reforço do Pinterest** (`conteudo/fila/2026-10-09.json`, "pode subir um pouco mais"): segunda
+    arte de 15 achadinhos novos e 2 convites do canal, de 09 a 15/10, somando 4 Pins por dia (5 em
+    12/10) com os já agendados. Teto de 5 por dia: a conta tem 2 semanas e recebeu ~14 Pins de uma
+    vez em 08/10, quando a outra aba subiu a semana 2 com datas passadas.
   - O cabeçalho do site estourava no celular (520 px numa tela de 375): no celular o menu
     passou para a segunda linha.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
