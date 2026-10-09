@@ -173,6 +173,16 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
     conferir no ar as 17 imagens e as 17 páginas; o Pinterest respondeu "Upload concluído".
   - O cabeçalho do site estourava no celular (520 px numa tela de 375): no celular o menu
     passou para a segunda linha.
+- 2026-10-09: **10 achadinhos novos e Telegram de 09 a 13/10, aprovados pelo Henrique** ("pode montar
+  os posts e subir"; a fila do Telegram estava vazia desde a saída dos 23 em 08/10):
+  - escolhidos pela busca do painel de afiliados (10 buscas, uma a cada 15 s; nota a partir de 4,77,
+    milhares de vendidos), sem repetir os 23 que já existem; o site vai a 33 produtos;
+  - 20 links no "Link personalizado" (Sub_id `site` e `telegram`), conferidos pelo redirecionamento,
+    20/20; sem Amazon neste lote;
+  - Telegram (`conteudo/fila/2026-10-09-telegram.json`): 2 por dia, 12:00 e 19:00, no formato
+    "vender o peixe". Eu disparo o robô na hora de cada post, porque o agendamento do GitHub atrasa
+    horas.
+  - Ainda sem Pin: o Pinterest segue no teto de ~5 por dia com o reforço de 09 a 15/10.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
   primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
   pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.
