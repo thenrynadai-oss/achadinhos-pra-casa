@@ -51,9 +51,17 @@
     "mensagem": 15,
     "publicado_em": "2026-10-08T17:02:40Z"
   },
+  "tg-caixa-organizadora-tenis": {
+    "mensagem": 41,
+    "publicado_em": "2026-10-09T18:52:43Z"
+  },
   "tg-carrinho-organizador-4-camadas": {
     "mensagem": 24,
     "publicado_em": "2026-10-08T17:03:22Z"
+  },
+  "tg-cesto-roupa-suja-bambu": {
+    "mensagem": 44,
+    "publicado_em": "2026-10-09T18:52:57Z"
   },
   "tg-clips-organizador-fios": {
     "mensagem": 32,
@@ -62,6 +70,14 @@
   "tg-colmeia-organizadora-gavetas": {
     "mensagem": 23,
     "publicado_em": "2026-10-08T17:03:18Z"
+  },
+  "tg-dosador-detergente-embutir-pia": {
+    "mensagem": 45,
+    "publicado_em": "2026-10-09T18:53:02Z"
+  },
+  "tg-escorredor-arroz-inox": {
+    "mensagem": 40,
+    "publicado_em": "2026-10-09T18:52:38Z"
   },
   "tg-escorredor-loucas-bambu": {
     "mensagem": 29,
@@ -79,9 +95,25 @@
     "mensagem": 25,
     "publicado_em": "2026-10-08T17:03:27Z"
   },
+  "tg-mini-potes-congelar": {
+    "mensagem": 46,
+    "publicado_em": "2026-10-09T18:53:06Z"
+  },
   "tg-mop-spray-reservatorio": {
     "mensagem": 27,
     "publicado_em": "2026-10-08T17:03:36Z"
+  },
+  "tg-organizador-embaixo-pia": {
+    "mensagem": 38,
+    "publicado_em": "2026-10-09T18:52:29Z"
+  },
+  "tg-organizador-giratorio-360": {
+    "mensagem": 43,
+    "publicado_em": "2026-10-09T18:52:52Z"
+  },
+  "tg-organizador-maquiagem-acrilico": {
+    "mensagem": 39,
+    "publicado_em": "2026-10-09T18:52:34Z"
   },
   "tg-porta-detergente-rack-inox": {
     "mensagem": 37,
@@ -110,6 +142,10 @@
   "tg-potes": {
     "mensagem": 17,
     "publicado_em": "2026-10-08T17:02:49Z"
+  },
+  "tg-potes-vidro-hermeticos-marmita": {
+    "mensagem": 42,
+    "publicado_em": "2026-10-09T18:52:48Z"
   },
   "tg-prateleira-box": {
     "mensagem": 20,
