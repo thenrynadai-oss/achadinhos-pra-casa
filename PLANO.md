@@ -186,7 +186,9 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - Telegram (`conteudo/fila/2026-10-09-telegram.json`): 2 por dia, 12:00 e 19:00, no formato
     "vender o peixe". Eu disparo o robô na hora de cada post, porque o agendamento do GitHub atrasa
     horas.
-  - Ainda sem Pin: o Pinterest segue no teto de ~5 por dia com o reforço de 09 a 15/10.
+  - **Pins dos 10** (pedido dele no mesmo dia; `conteudo/fila/2026-10-16.json`): dois por dia, às
+    14:30 e 17:45, de 16 a 20/10, por cima dos 2 por dia já agendados. Fica em 4 por dia, abaixo do
+    teto de 5, que o reforço de 09 a 15/10 já ocupa. CSV `saida/pinterest-lote-2026-10-16.csv`.
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
   primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
   pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.
