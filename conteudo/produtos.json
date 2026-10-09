@@ -574,5 +574,157 @@
       "imagem": "cn-11134207-7ras8-m9l43hshn9jxdd"
     },
     "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "kit-organizadores-acrilico-gaveta",
+    "nome": "Kit 7 organizadores de acrílico para gaveta e geladeira",
+    "categoria": "Cozinha",
+    "foto": "img/produtos/kit-organizadores-acrilico-gaveta.jpg",
+    "por_que": "Sete caixinhas de acrílico que se encaixam na gaveta ou na geladeira: talher, tempero e miudeza cada um no seu lugar.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/6L55RVs7pf",
+      "amazon": "https://www.amazon.com.br/dp/B07FTKKBM3?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "22894045367",
+      "shopid": "955954742",
+      "imagem": "br-11134207-7r98o-mdn5xvzwk2c10f"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "suporte-celular-chuveiro",
+    "nome": "Suporte de celular para banheiro e cozinha à prova d'água",
+    "categoria": "Banheiro",
+    "foto": "img/produtos/suporte-celular-chuveiro.jpg",
+    "por_que": "Gruda na parede sem furar, protege da água e gira 360°: série no banho ou receita na cozinha sem molhar o celular.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/40hAfE10ZE",
+      "amazon": "https://www.amazon.com.br/dp/B0G51YDNYL?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "19298986895",
+      "shopid": "763716148",
+      "imagem": "br-11134207-7r98o-lm7i8jl0k6wm07"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "varal-de-chao-3-andares",
+    "nome": "Varal de chão de 3 andares com rodinhas",
+    "categoria": "Lavanderia",
+    "foto": "img/produtos/varal-de-chao-3-andares.jpg",
+    "por_que": "Três andares de varal com rodinhas: estende a roupa toda num cantinho, leva pro sol e dobra depois.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/4B0arX0NEH",
+      "amazon": "https://www.amazon.com.br/dp/B0DMXD4BB6?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "22698677025",
+      "shopid": "330139332",
+      "imagem": "br-11134207-81z1k-mhg7txeyy7erfb"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "caixa-organizadora-60-litros",
+    "nome": "Caixa organizadora transparente de 60 litros com tampa",
+    "categoria": "Casa",
+    "foto": "img/produtos/caixa-organizadora-60-litros.jpg",
+    "por_que": "Caixa grande e transparente com tampa: cobertor, brinquedo ou roupa de frio guardados e à vista, sem pó.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/4LK13pzjtK",
+      "amazon": "https://www.amazon.com.br/dp/B0876DPZKD?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "23999011126",
+      "shopid": "396291413",
+      "imagem": "br-11134207-820ld-mrbuli2xgav862"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "tapete-banheiro-absorvente",
+    "nome": "Tapete de banheiro absorvente antiderrapante",
+    "categoria": "Banheiro",
+    "foto": "img/produtos/tapete-banheiro-absorvente.jpg",
+    "por_que": "Saiu do banho, pisou e secou: o tapete absorve a água na hora e não escorrega.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/4VdRG8z6YN",
+      "amazon": "https://www.amazon.com.br/dp/B0CT65KQW4?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "58201523970",
+      "shopid": "1064041485",
+      "imagem": "sg-11134201-8260b-mm4q3xn8yayw0f"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "dispenser-cereais-giratorio",
+    "nome": "Dispenser de grãos giratório 360°",
+    "categoria": "Despensa",
+    "foto": "img/produtos/dispenser-cereais-giratorio.jpg",
+    "por_que": "Arroz, feijão e grão em compartimentos que giram: puxa a gavetinha e sai a porção, sem pacote aberto no armário.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/gQih6eAH3",
+      "amazon": "https://www.amazon.com.br/dp/B0CV4HFKYT?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "22098695990",
+      "shopid": "1443730896",
+      "imagem": "sg-11134201-82587-mr111mm93ojre0"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "pote-dispenser-hermetico-2-5l",
+    "nome": "Kit 2 potes dispenser herméticos de 2,5 L com copo medidor",
+    "categoria": "Despensa",
+    "foto": "img/produtos/pote-dispenser-hermetico-2-5l.jpg",
+    "por_que": "Pote hermético de 2,5 L com copo medidor e bico: serve arroz e cereal na medida e mantém fresquinho.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/1BMzI1cGGA",
+      "amazon": "https://www.amazon.com.br/dp/B0GRD1HD6V?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "21999899540",
+      "shopid": "1613378439",
+      "imagem": "br-11134207-820le-ms45yhalxhj92d"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "sacos-organizadores-roupas",
+    "nome": "Kit de sacos organizadores para guarda-roupa",
+    "categoria": "Guarda-roupa",
+    "foto": "img/produtos/sacos-organizadores-roupas.jpg",
+    "por_que": "Sacos grandes com visor e alça: roupa de cama e de frio dobradas, empilhadas e protegidas do pó.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/113Z5ictb9"
+    },
+    "shopee": {
+      "itemid": "58202589001",
+      "shopid": "1651083163",
+      "imagem": "br-11134207-820lt-mm9xdit7rm6e1e"
+    },
+    "adicionado_em": "2026-10-09"
+  },
+  {
+    "slug": "caixa-organizadora-cabos",
+    "nome": "Caixa organizadora de cabos e régua de tomada",
+    "categoria": "Casa",
+    "foto": "img/produtos/caixa-organizadora-cabos.jpg",
+    "por_que": "Esconde a régua de tomada e o emaranhado de fios dentro de uma caixa: a mesa e a TV ficam limpas.",
+    "links": {
+      "shopee": "https://s.shopee.com.br/BUS6Bg4I0",
+      "amazon": "https://www.amazon.com.br/dp/B094HZJRQY?tag=achadinhoshen-20"
+    },
+    "shopee": {
+      "itemid": "22594555535",
+      "shopid": "1326497213",
+      "imagem": "sg-11134201-82583-mg3yviogt3pm81"
+    },
+    "adicionado_em": "2026-10-09"
   }
 ]
