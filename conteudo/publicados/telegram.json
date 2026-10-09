@@ -51,6 +51,14 @@
     "mensagem": 15,
     "publicado_em": "2026-10-08T17:02:40Z"
   },
+  "tg-caixa-organizadora-60-litros": {
+    "mensagem": 59,
+    "publicado_em": "2026-10-09T19:03:57Z"
+  },
+  "tg-caixa-organizadora-cabos": {
+    "mensagem": 64,
+    "publicado_em": "2026-10-09T19:04:20Z"
+  },
   "tg-caixa-organizadora-tenis": {
     "mensagem": 41,
     "publicado_em": "2026-10-09T18:52:43Z"
@@ -71,6 +79,10 @@
     "mensagem": 23,
     "publicado_em": "2026-10-08T17:03:18Z"
   },
+  "tg-dispenser-cereais-giratorio": {
+    "mensagem": 61,
+    "publicado_em": "2026-10-09T19:04:06Z"
+  },
   "tg-dosador-detergente-embutir-pia": {
     "mensagem": 45,
     "publicado_em": "2026-10-09T18:53:02Z"
@@ -90,6 +102,10 @@
   "tg-geladeira": {
     "mensagem": 18,
     "publicado_em": "2026-10-08T17:02:54Z"
+  },
+  "tg-kit-organizadores-acrilico-gaveta": {
+    "mensagem": 56,
+    "publicado_em": "2026-10-09T19:03:43Z"
   },
   "tg-lixeira-automatica-sensor": {
     "mensagem": 25,
@@ -139,6 +155,10 @@
     "mensagem": 35,
     "publicado_em": "2026-10-08T17:04:13Z"
   },
+  "tg-pote-dispenser-hermetico-2-5l": {
+    "mensagem": 62,
+    "publicado_em": "2026-10-09T19:04:11Z"
+  },
   "tg-potes": {
     "mensagem": 17,
     "publicado_em": "2026-10-08T17:02:49Z"
@@ -155,9 +175,17 @@
     "mensagem": 22,
     "publicado_em": "2026-10-08T17:03:13Z"
   },
+  "tg-sacos-organizadores-roupas": {
+    "mensagem": 63,
+    "publicado_em": "2026-10-09T19:04:16Z"
+  },
   "tg-sapateira": {
     "mensagem": 16,
     "publicado_em": "2026-10-08T17:02:45Z"
+  },
+  "tg-suporte-celular-chuveiro": {
+    "mensagem": 57,
+    "publicado_em": "2026-10-09T19:03:48Z"
   },
   "tg-suporte-tampa-panela": {
     "mensagem": 34,
@@ -171,9 +199,17 @@
     "mensagem": 19,
     "publicado_em": "2026-10-08T17:02:59Z"
   },
+  "tg-tapete-banheiro-absorvente": {
+    "mensagem": 60,
+    "publicado_em": "2026-10-09T19:04:01Z"
+  },
   "tg-temperos": {
     "mensagem": 14,
     "publicado_em": "2026-10-08T17:02:36Z"
+  },
+  "tg-varal-de-chao-3-andares": {
+    "mensagem": 58,
+    "publicado_em": "2026-10-09T19:03:52Z"
   },
   "tg-varal-de-prendedores": {
     "mensagem": 28,
