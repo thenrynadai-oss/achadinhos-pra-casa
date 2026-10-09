@@ -178,7 +178,11 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
   - escolhidos pela busca do painel de afiliados (10 buscas, uma a cada 15 s; nota a partir de 4,77,
     milhares de vendidos), sem repetir os 23 que já existem; o site vai a 33 produtos;
   - 20 links no "Link personalizado" (Sub_id `site` e `telegram`), conferidos pelo redirecionamento,
-    20/20; sem Amazon neste lote;
+    20/20;
+  - Amazon em 9 dos 10 (pedido dele no mesmo dia), modelo equivalente com nota de 4,2 a 4,8, de 409 a
+    748 avaliações e em estoque, conferido na página de cada um. O mini pote de 60 ml ficou sem: a
+    Amazon só tinha pote de 150 ml para cima. No Telegram, a Amazon entra só pelo botão "Também tem
+    na Amazon", que leva à página do site;
   - Telegram (`conteudo/fila/2026-10-09-telegram.json`): 2 por dia, 12:00 e 19:00, no formato
     "vender o peixe". Eu disparo o robô na hora de cada post, porque o agendamento do GitHub atrasa
     horas.
