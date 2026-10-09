@@ -188,7 +188,10 @@ em 2026-09-25, porque as contas antigas foram abandonadas (não suspensas).
     horas.
   - **Pins dos 10** (pedido dele no mesmo dia; `conteudo/fila/2026-10-16.json`): dois por dia, às
     14:30 e 17:45, de 16 a 20/10, por cima dos 2 por dia já agendados. Fica em 4 por dia, abaixo do
-    teto de 5, que o reforço de 09 a 15/10 já ocupa. CSV `saida/pinterest-lote-2026-10-16.csv`.
+    teto de 5, que o reforço de 09 a 15/10 já ocupa. **CSV enviado** no mesmo dia
+    (`saida/pinterest-lote-2026-10-16.csv`, 10 Pins), no Chrome dele, conta Achadinhos pra Casa
+    (`/achadinhospracasa/`), depois de conferir no ar as 10 imagens e as 10 páginas; o Pinterest
+    respondeu "Upload concluído".
 - 2026-09-25: **Facebook adiado pelo Henrique** até a Shopee aprovar e o Pinterest mostrar os
   primeiros resultados. Motivos: o alcance de uma página nova é quase zero, e ela fica
   pendurada no perfil pessoal dele. Por enquanto, as camadas ativas são Pinterest e Telegram.
